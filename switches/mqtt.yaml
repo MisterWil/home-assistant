@@ -1,0 +1,120 @@
+#  Virtual MQTT switches maintain state
+#  over Home Assistant restarts. These switches
+#  mainly enable or disable automations. All
+#  switches have QOS = 1, which is guaranteed delivery
+#  at least once. It is important that switch state
+#  changes always are delivered.
+
+#  Automation disables or enables all automations.
+
+- platform: mqtt
+  name: "Automation"
+  state_topic: "nfc/automation"
+  command_topic: "nfc/automation"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+#  Sleeping turns on when the bedroom light turns
+#  off, devices are home, and it's after 21:00.
+
+- platform: mqtt
+  name: "Sleeping"
+  state_topic: "nfc/sleeping"
+  command_topic: "nfc/sleeping"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+#  Vacation is manually switched to enabled or
+#  disable automations that might otherwise
+#  automatically trigger based on time of day,
+#  or other events that are only relevant when
+#  someone is home or will be home soon.
+
+#  Vacation also controls automations based on
+#  turning devices on and off to simulate that
+#  people are home.
+
+- platform: mqtt
+  name: "Vacation"
+  state_topic: "nfc/vacation"
+  command_topic: "nfc/vacation"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+#  Toggle if guests are present. They aren't device-tracked,
+#  and may reside in areas that normally see other uses,
+#  so the smart home should act accordingly.
+
+- platform: mqtt
+  name: "Guests"
+  state_topic: "nfc/guests"
+  command_topic: "nfc/guests"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+#  Control commute delay alerts for Sara during the summer
+
+- platform: mqtt
+  name: "Sara Summer"
+  state_topic: "nfc/sara_summer"
+  command_topic: "nfc/sara_summer"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+#  Enable or disable presence-based automations. Presence
+#  doesn't always work perfectly, so provie a means to disable
+#  automations that rely on it.
+
+- platform: mqtt
+  name: "Presence"
+  state_topic: "nfc/presence"
+  command_topic: "nfc/presence"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+#  Control commute delay alerts for him.
+
+- platform: mqtt
+  name: "His Alert Delays"
+  state_topic: "nfc/his_alert_delays"
+  command_topic: "nfc/his_alert_delays"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+#  Control commute delay alerts for her.
+
+- platform: mqtt
+  name: "Her Alert Delays"
+  state_topic: "nfc/her_alert_delays"
+  command_topic: "nfc/her_alert_delays"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+#  Controls sending and recieving tracking alerts
+#  to the house notification group based on any
+#  state changes.
+
+- platform: mqtt
+  name: "Tracking Alerts"
+  state_topic: "nfc/tracking_alerts"
+  command_topic: "nfc/tracking_alerts"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true

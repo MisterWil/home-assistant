@@ -1,0 +1,3 @@
+#  Monitor internet connection speed with fast.com
+
+- platform: fastdotcom

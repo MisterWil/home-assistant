@@ -1,0 +1,31 @@
+Downstairs:
+  - binary_sensor.home_theater
+  - light.living_room
+  - light.tv_backlight
+  - thermostat.downstairs
+  - sensor.downstairs_occupancy
+  - sensor.downstairs_temperature
+  - sensor.downstairs_humidity
+
+Upstairs:
+  - thermostat.upstairs
+  - sensor.upstairs_occupancy
+  - sensor.upstairs_temperature
+  - sensor.upstairs_humidity
+
+Master Bedroom:
+  - light.master_bedroom
+  - light.nightstand
+  - sensor.bedroom_occupancy
+  - sensor.bedroom_temperature
+
+Guest Room:
+  - light.guest_room_light
+
+Loft:
+  - sensor.loft_occupancy
+  - sensor.loft_temperature
+  - light.loft_light
+  
+Garage:
+  - cover.garage_door

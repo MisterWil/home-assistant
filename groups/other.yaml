@@ -1,0 +1,85 @@
+Family:
+  - device_tracker.saraschrader_saraiphone
+  - device_tracker.wilrader_wiliphone
+
+Commute:
+  - cover.garage_door
+  - sensor.his_morning
+  - sensor.his_evening
+  - sensor.her_morning
+  - sensor.her_evening
+
+Harmony Activities:
+  - switch.watch_tv
+  - switch.watch_appletv
+  - switch.play_ps4
+  - switch.play_wiiu
+
+All Lights:
+  - light.living_room
+  - light.tv_backlight
+  - light.loft_light
+  - light.guest_room_light
+  - light.master_bedroom
+  - light.nightstand
+
+Hue lights:
+  - light.living_room
+  - light.tv_backlight
+  - light.guest_room_light
+  - light.master_bedroom
+  - light.nightstand
+
+Sunset Lights:
+  - light.living_room
+  - light.nightstand
+  - light.master_bedroom
+  - light.loft_light
+
+Home Lights:
+  - light.living_room
+  - light.nightstand
+  - light.master_bedroom
+  - light.loft_light
+
+Weather Overview:
+  - sun.sun
+  - sensor.forecastio_summary
+  - sensor.forecastio_temperature
+  - sensor.forecastio_humidity
+
+Weather Wind Rain:
+  - sensor.forecastio_wind_speed
+  - sensor.forecastio_wind_bearing
+  - sensor.forecastio_precip
+  - sensor.forecastio_precip_probability
+  - sensor.forecastio_precip_intensity
+  - sensor.forecastio_cloud_coverage
+  - sensor.forecastio_nearest_storm_distance
+
+Weather Report:
+  - sensor.forecastio_daily_summary
+  - sensor.forecastio_hourly_summary
+
+System sensors:
+  - sensor.cpu_use
+  - sensor.ram_use
+  - sensor.since_last_boot
+  - sensor.sent_eth0
+  - sensor.received_eth0
+  - sensor.ipv4_address_eth0
+  - sensor.fastcom_download
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+  - sensor.speedtest_ping
+  - updater.updater
+
+Switches:
+  - switch.automation
+  - switch.guests
+  - switch.presence
+  - switch.sleeping
+  - switch.vacation
+  - switch.his_alert_delays
+  - switch.her_alert_delays
+  - switch.tracking_alerts

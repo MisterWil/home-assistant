@@ -1,0 +1,3 @@
+- platform: tplink
+  name: Smart Switch
+  host: !secret tplink_host

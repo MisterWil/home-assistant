@@ -1,0 +1,5 @@
+- platform: hue
+  host: !secret hue_host
+  allow_in_emulated_hue: false
+  allow_unreachable: true
+  scan_interval: 10

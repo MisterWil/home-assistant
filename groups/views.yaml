@@ -1,0 +1,28 @@
+Home:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.family
+    - group.commute
+    - group.downstairs
+    - group.upstairs
+    - group.loft
+    - group.master_bedroom
+    - group.guest_room
+#    - camera.living_room
+
+Weather:
+  view: yes
+  entities:
+    - group.weather_overview
+    - group.weather_wind_rain
+    - group.weather_report
+    - camera.weather_radar
+
+Admin:
+  view: yes
+  entities:
+    - group.system_sensors
+    - group.switches
+    - group.all_lights_2
+    - group.harmony_activities

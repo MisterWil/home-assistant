@@ -1,0 +1,63 @@
+# Based on: https://github.com/happyleavesaoc/my-home-automation/tree/master/homeassistant
+
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: !secret unit_system
+  time_zone: !secret timezone
+  customize: !include includes/customize.yaml
+  customize_glob: !include includes/customize_pattern.yaml
+  packages:  !include_dir_named packages
+  
+#google:
+#  client_id: !secret google_client_id
+#  client_secret: !secret google_client_secret
+  
+ecobee:
+  api_key: !secret ecobee_api_key
+  
+ifttt:
+  key: !env_var IFTTT_API_KEY
+
+digital_ocean:
+  access_token: !secret digitalocean_api_key
+  
+mqtt:
+  embedded:
+  
+#emulated_hue:
+#  host_ip: !secret system_ip
+#  type: alexa
+#  expose_by_default: false
+#  off_maps_to_on_domains:
+#    - script
+
+http:
+  base_url: !secret hass_base_url
+  server_port: !secret hass_server_port
+  api_password: !secret hass_api_password
+  ssl_certificate: !secret hass_ssl_certificate
+  ssl_key: !secret hass_ssl_key
+  ip_ban_enabled: true
+  login_attempts_threshold: 3
+
+automation: !include_dir_list automation
+binary_sensor: !include_dir_merge_list binary_sensors
+cover: !include !include_dir_merge_list covers
+group: !include_dir_merge_named groups
+light: !include_dir_merge_list lights
+logger: !include includes/logger.yaml
+logbook: !include includes/logbook.yaml
+remote: !include_dir_merge_list remotes
+scene: !include includes/scenes.yaml
+sensor: !include_dir_merge_list sensors
+switch: !include_dir_merge_list switches
+zone: !include includes/zones.yaml
+
+ios:
+sun:
+frontend:
+history:
+config:

@@ -1,0 +1,7 @@
+- platform: nzbget
+  host: !secret nzbget_host
+  monitored_variables:
+    - average_download_rate
+    - download_rate
+    - download_size
+    - free_disk_space
