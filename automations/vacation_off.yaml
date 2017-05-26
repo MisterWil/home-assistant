@@ -1,8 +1,8 @@
-- alias: Turn off lights at 10pm with a random delay from 1 minute to 1 hour and 59 minutes
+- alias: Turn off lights at 10pm with a random delay of up to 1hr59m59s
 
     trigger:
       - platform: time
-        after: '21:00:00'
+        after: '22:00:00'
         
     condition:
       - condition: state
@@ -14,7 +14,7 @@
         state: 'on'
         
   action:
-    - delay: '{{ (range(0, 1)|random|int) }}:{{ (range(1, 59)|random|int) }}:00'
+    - delay: '{{ ((range(0, 1) | random) | int) ~ ":" ~ ((range(1, 59) | random) | int)  ~ ":" ~  ((range(1, 59) | random) | int) }}'
     
     - service: scene.turn_off
-      entity_id: scene.vacation
+      entity_id: scene.indoor_lights_sunset

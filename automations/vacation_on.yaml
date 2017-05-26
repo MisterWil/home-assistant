@@ -1,4 +1,4 @@
-- alias: Turn on lights an hour before sunset with a random delay from 1 hour 1 minute to 2 hours 59 minutes
+- alias: Turn on lights an hour before sunset with a random delay of up to 2hr59m59s
 
     trigger:
       - platform: sun
@@ -15,7 +15,7 @@
         state: 'on'
         
   action:
-    - delay: '{{ (range(1, 2)|random|int) }}:{{ (range(1, 59)|random|int) }}:00'
+    - delay: '{{ ((range(1, 2) | random) | int) ~ ":" ~ ((range(1, 59) | random) | int)  ~ ":" ~  ((range(1, 59) | random) | int) }}'
     
     - service: scene.turn_on
       entity_id: scene.vacation
