@@ -8,24 +8,24 @@
 
 - platform: google_travel_time
   name: His Evening
-  api_key: !env_var google_api_key
-  origin: !env_var his_work_address
-  destination: !env_var home_address
+  api_key: !secret google_api_key
+  origin: !secret his_work_address
+  destination: !secret home_address
   options:
     mode: driving
 
 - platform: google_travel_time
   name: Her Morning
-  api_key: !env_var google_api_key
-  origin: !env_var home_address
-  destination: !env_var her_work_address
+  api_key: !secret google_api_key
+  origin: !secret home_address
+  destination: !secret her_work_address
   options:
     mode: driving
 
 - platform: google_travel_time
   name: Her Evening
-  api_key: !env_var google_api_key
-  origin: !env_var her_work_address
-  destination: !env_var home_address
+  api_key: !secret google_api_key
+  origin: !secret her_work_address
+  destination: !secret home_address
   options:
     mode: driving
