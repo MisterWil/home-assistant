@@ -4,23 +4,23 @@
 
 - alias: Turn on lights when someone gets home within an hour of sunset
 
-    trigger:
-      - platform: state
-        entity_id: group.all_devices
-        state: 'home'
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      state: 'home'
       
-    condition:
-      - condition: state
-        entity_id: switch.automation
-        state: 'on'
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
         
-      - condition: state
-        entity_id: switch.presence
-        state: 'on'
+    - condition: state
+      entity_id: switch.presence
+      state: 'on'
 
-      - condition: sun
-        after: sunset
-        after_offset: '-00:59:00'
+    - condition: sun
+      after: sunset
+      after_offset: '-00:59:00'
 
   action:
     - service: scene.turn_on

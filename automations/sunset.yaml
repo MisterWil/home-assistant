@@ -4,27 +4,27 @@
 
 - alias: Turn on Lights at Sunset when Occupied
 
-    trigger:
-      - platform: sun
-        event: 'sunset'
-        offset: '-00:59:00'
+  trigger:
+    - platform: sun
+      event: 'sunset'
+      offset: '-00:59:00'
         
-    condition:
-      - condition: state
-        entity_id: switch.automation
-        state: 'on'
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
         
-      - condition: state
-        entity_id: switch.presence
-        state: 'on'
+    - condition: state
+      entity_id: switch.presence
+      state: 'on'
         
-      - condition: state
-        entity_id: switch.vacation
-        state: 'off'
+    - condition: state
+      entity_id: switch.vacation
+      state: 'off'
         
-      - condition: state
-        entity_id: group.all_devices
-        state: 'home'
+    - condition: state
+      entity_id: group.all_devices
+      state: 'home'
         
   action:
     - service: scene.turn_on
