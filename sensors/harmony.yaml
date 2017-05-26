@@ -2,4 +2,4 @@
   sensors:
     living_room_tv:
       value_template: '{{ states.remote.living_room.attributes.current_activity }}'
-      friendly_name: 'Living Room TV'
+      friendly_name: 'TV Activity'

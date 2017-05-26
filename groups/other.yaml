@@ -1,25 +1,46 @@
 Family:
-  - sensor.neighborhood_incidents
   - device_tracker.sara_schraders_iphone
   - device_tracker.wils_iphone
+  - sensor.neighborhood_incidents
+  
+Theater:
+  - sensor.living_room_tv
+  - switch.watch_tv
+  - switch.apple_tv
+  - switch.ps4
+  - switch.nintendo_switch
 
 Climate Overview:
   - climate.downstairs
   - climate.upstairs
   
-Ecobee Sensors:
-  - binary_sensor.bedroom_occupancy
-  - binary_sensor.downstairs_occupancy
-  - binary_sensor.loft_occupancy
-  - binary_sensor.upstairs_occupancy
+Downstairs Climate:
   - climate.downstairs
-  - climate.upstairs
-  - sensor.bedroom_temperature
   - sensor.downstairs_humidity
-  - sensor.downstairs_temperature
-  - sensor.loft_temperature
+  - binary_sensor.downstairs_occupancy
+  
+Upstairs Climate:
+  - climate.upstairs
   - sensor.upstairs_humidity
-  - sensor.upstairs_temperature
+  - binary_sensor.upstairs_occupancy
+  - sensor.loft_temperature
+  - binary_sensor.loft_occupancy
+  
+Bedroom Climate:
+  - sensor.bedroom_temperature
+  - binary_sensor.bedroom_occupancy
+  
+Ecobee Sensors:
+  - climate.downstairs
+  - sensor.downstairs_humidity
+  - binary_sensor.downstairs_occupancy
+  - climate.upstairs
+  - sensor.upstairs_humidity
+  - binary_sensor.upstairs_occupancy
+  - sensor.loft_temperature
+  - binary_sensor.loft_occupancy
+  - sensor.bedroom_temperature
+  - binary_sensor.bedroom_occupancy
 
 Commute:
   - cover.garage_door

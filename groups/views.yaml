@@ -11,35 +11,26 @@ Living Room:
   view: yes
   icon: mdi:sofa
   entities:
-    - sensor.living_room
-    - switch.watch_tv
-    - switch.apple_tv
-    - switch.ps4
-    - switch.nintendo_switch
+    - group.theater
+    - group.downstairs_climate
     - light.living_room
     - light.tv_backlight
-    - climate.downstairs
-    - binary_sensor.downstairs_occupancy
-    - sensor.downstairs_temperature
-    - sensor.downstairs_humidity
 
 Loft:
   view: yes
   icon: mdi:stairs
   entities:
-    - binary_sensor.loft_occupancy
-    - sensor.loft_temperature
+    - group.upstairs_climate
     - light.loft_light
 
 Bedrooms:
   view: yes
   icon: mdi:hotel
   entities:
+    - group.bedroom_climate
     - light.master_bedroom
     - light.nightstand
     - light.guest_room_light
-    - binary_sensor.bedroom_occupancy
-    - sensor.bedroom_temperature
 
 Exterior:
   view: yes
