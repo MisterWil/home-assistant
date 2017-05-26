@@ -1,6 +1,6 @@
 #  Monitor some basic weather conditions.
 
-- platform: forecast
+- platform: darksky
   api_key: !secret forecastio_api_key
   monitored_conditions:
   - summary
