@@ -4,11 +4,13 @@ Family:
   - sensor.neighborhood_incidents
   
 Theater:
-  - sensor.living_room_tv
-  - switch.watch_tv
-  - switch.apple_tv
-  - switch.ps4
-  - switch.nintendo_switch
+  control: hidden
+  entities:
+    - sensor.living_room_tv
+    - switch.watch_tv
+    - switch.apple_tv
+    - switch.ps4
+    - switch.nintendo_switch
 
 Climate Overview:
   - climate.downstairs
