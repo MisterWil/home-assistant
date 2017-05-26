@@ -1,0 +1,10 @@
+- platform: command_line
+  name: New Commits
+  scan_interval: 600
+  command: "git fetch && git log master..origin/master --pretty=oneline | wc -l"
+  
+- platform: template
+  sensors:
+    home_assistant_last_restart:
+      value_template: '{{ as_timestamp(states.automation.startup_notification.attributes.last_triggered) | timestamp_custom("%Y-%m-%d %H:%M:%S") }}'
+      friendly_name: Last Restart

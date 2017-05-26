@@ -123,6 +123,8 @@ System sensors:
   - sensor.speedtest_download
   - sensor.speedtest_upload
   - sensor.speedtest_ping
+  - sensor.home_assistant_last_restart
+  - sensor.new_commits
   - updater.updater
 
 Switches:
