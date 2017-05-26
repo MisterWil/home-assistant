@@ -1,3 +1,4 @@
 - platform: harmony
   name: Living Room
   host: !secret harmony_host
+  scan_interval: 5

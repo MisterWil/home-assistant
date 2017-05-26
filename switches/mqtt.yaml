@@ -16,18 +16,6 @@
   payload_off: "no"
   retain: true
 
-#  Sleeping turns on when the bedroom light turns
-#  off, devices are home, and it's after 21:00.
-
-- platform: mqtt
-  name: "Sleeping"
-  state_topic: "nfc/sleeping"
-  command_topic: "nfc/sleeping"
-  qos: 1
-  payload_on: "yes"
-  payload_off: "no"
-  retain: true
-
 #  Vacation is manually switched to enabled or
 #  disable automations that might otherwise
 #  automatically trigger based on time of day,
@@ -55,17 +43,6 @@
   name: "Guests"
   state_topic: "nfc/guests"
   command_topic: "nfc/guests"
-  qos: 1
-  payload_on: "yes"
-  payload_off: "no"
-  retain: true
-
-#  Control commute delay alerts for Sara during the summer
-
-- platform: mqtt
-  name: "Sara Summer"
-  state_topic: "nfc/sara_summer"
-  command_topic: "nfc/sara_summer"
   qos: 1
   payload_on: "yes"
   payload_off: "no"

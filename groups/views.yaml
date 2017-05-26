@@ -1,28 +1,65 @@
-Home:
+default_view:
   view: yes
   icon: mdi:home
   entities:
     - group.family
     - group.commute
-    - group.downstairs
-    - group.upstairs
-    - group.loft
-    - group.master_bedroom
-    - group.guest_room
-#    - camera.living_room
-
-Weather:
+    - group.hue_lights
+    - group.climate_overview
+    
+Living Room:
   view: yes
+  icon: mdi:sofa
+  entities:
+    - sensor.living_room
+    - switch.watch_tv
+    - switch.apple_tv
+    - switch.ps4
+    - switch.nintendo_switch
+    - light.living_room
+    - light.tv_backlight
+    - climate.downstairs
+    - binary_sensor.downstairs_occupancy
+    - sensor.downstairs_temperature
+    - sensor.downstairs_humidity
+
+Loft:
+  view: yes
+  icon: mdi:stairs
+  entities:
+    - binary_sensor.loft_occupancy
+    - sensor.loft_temperature
+    - light.loft_light
+
+Bedrooms:
+  view: yes
+  icon: mdi:hotel
+  entities:
+    - light.master_bedroom
+    - light.nightstand
+    - light.guest_room_light
+    - binary_sensor.bedroom_occupancy
+    - sensor.bedroom_temperature
+
+Exterior:
+  view: yes
+  icon: mdi:tree
   entities:
     - group.weather_overview
     - group.weather_wind_rain
     - group.weather_report
-    - camera.weather_radar
 
-Admin:
+Automation:
   view: yes
+  icon: mdi:robot
   entities:
-    - group.system_sensors
     - group.switches
-    - group.all_lights_2
-    - group.harmony_activities
+    
+Sensors:
+  view: yes
+  icon: mdi:gauge
+  entities:
+    - group.ecobee_sensors
+    - group.harmony
+    - group.device_sensors
+    - group.system_sensors

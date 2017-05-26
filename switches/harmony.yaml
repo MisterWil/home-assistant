@@ -1,0 +1,42 @@
+- platform: template
+  switches:
+    watch_tv:
+      value_template: "{% if is_state('sensor.living_room', 'Watch TV') %}on{% else %}off{% endif %}"
+      turn_on:
+        service: remote.turn_on
+        data_template:
+          entity_id: remote.living_room
+          activity: 24508505
+      turn_off:
+        service: remote.turn_off
+        entity_id: remote.living_room
+    apple_tv:
+      value_template: "{% if is_state('sensor.living_room', 'Watch AppleTV') %}on{% else %}off{% endif %}"
+      turn_on:
+        service: remote.turn_on
+        data_template:
+          entity_id: remote.living_room
+          activity: 21876818
+      turn_off:
+        service: remote.turn_off
+        entity_id: remote.living_room
+    ps4:
+      value_template: "{% if is_state('sensor.living_room', 'PS4') %}on{% else %}off{% endif %}"
+      turn_on:
+        service: remote.turn_on
+        data_template:
+          entity_id: remote.living_room
+          activity: 21916668
+      turn_off:
+        service: remote.turn_off
+        entity_id: remote.living_room
+    nintendo_switch:
+      value_template: "{% if is_state('sensor.living_room', 'Switch') %}on{% else %}off{% endif %}"
+      turn_on:
+        service: remote.turn_on
+        data_template:
+          entity_id: remote.living_room
+          activity: 25260577
+      turn_off:
+        service: remote.turn_off
+        entity_id: remote.living_room

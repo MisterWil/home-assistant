@@ -1,6 +1,25 @@
 Family:
-  - device_tracker.saraschrader_saraiphone
-  - device_tracker.wilrader_wiliphone
+  - sensor.neighborhood_incidents
+  - device_tracker.sara_schraders_iphone
+  - device_tracker.wils_iphone
+
+Climate Overview:
+  - climate.downstairs
+  - climate.upstairs
+  
+Ecobee Sensors:
+  - binary_sensor.bedroom_occupancy
+  - binary_sensor.downstairs_occupancy
+  - binary_sensor.loft_occupancy
+  - binary_sensor.upstairs_occupancy
+  - climate.downstairs
+  - climate.upstairs
+  - sensor.bedroom_temperature
+  - sensor.downstairs_humidity
+  - sensor.downstairs_temperature
+  - sensor.loft_temperature
+  - sensor.upstairs_humidity
+  - sensor.upstairs_temperature
 
 Commute:
   - cover.garage_door
@@ -9,13 +28,14 @@ Commute:
   - sensor.her_morning
   - sensor.her_evening
 
-Harmony Activities:
+Harmony:
+  - sensor.living_room
   - switch.watch_tv
-  - switch.watch_appletv
-  - switch.play_ps4
-  - switch.play_wiiu
+  - switch.apple_tv
+  - switch.ps4
+  - switch.nintendo_switch
 
-All Lights:
+All House Lights:
   - light.living_room
   - light.tv_backlight
   - light.loft_light
@@ -26,6 +46,7 @@ All Lights:
 Hue lights:
   - light.living_room
   - light.tv_backlight
+  - light.loft_light
   - light.guest_room_light
   - light.master_bedroom
   - light.nightstand
@@ -44,22 +65,29 @@ Home Lights:
 
 Weather Overview:
   - sun.sun
-  - sensor.forecastio_summary
-  - sensor.forecastio_temperature
-  - sensor.forecastio_humidity
+  - sensor.dark_sky_summary
+  - sensor.dark_sky_temperature
+  - sensor.dark_sky_humidity
 
 Weather Wind Rain:
-  - sensor.forecastio_wind_speed
-  - sensor.forecastio_wind_bearing
-  - sensor.forecastio_precip
-  - sensor.forecastio_precip_probability
-  - sensor.forecastio_precip_intensity
-  - sensor.forecastio_cloud_coverage
-  - sensor.forecastio_nearest_storm_distance
+  - sensor.dark_sky_wind_speed
+  - sensor.dark_sky_wind_bearing
+  - sensor.dark_sky_precip
+  - sensor.dark_sky_precip_probability
+  - sensor.dark_sky_precip_intensity
+  - sensor.dark_sky_cloud_coverage
+  - sensor.dark_sky_nearest_storm_distance
 
 Weather Report:
-  - sensor.forecastio_daily_summary
-  - sensor.forecastio_hourly_summary
+  - sensor.dark_sky_daily_summary
+  - sensor.dark_sky_hourly_summary
+  
+Device Sensors:
+  - sensor.wils_iphone_battery_state
+  - sensor.wils_iphone_battery_level
+  - sensor.sara_schraders_iphone_battery_state
+  - sensor.sara_schraders_iphone_battery_level
+  - binary_sensor.wilpwr
 
 System sensors:
   - sensor.cpu_use
@@ -78,7 +106,6 @@ Switches:
   - switch.automation
   - switch.guests
   - switch.presence
-  - switch.sleeping
   - switch.vacation
   - switch.his_alert_delays
   - switch.her_alert_delays
