@@ -18,7 +18,7 @@ ecobee:
   api_key: !secret ecobee_api_key
   
 ifttt:
-  key: !env_var IFTTT_API_KEY
+  key: !secret ifttt_api_key
 
 digital_ocean:
   access_token: !secret digitalocean_api_key
