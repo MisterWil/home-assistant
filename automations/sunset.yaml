@@ -1,0 +1,31 @@
+#  Note that `group.all_devices` is special: Its state
+#  is 'home' if ANY tracked device is home, and 'not_home'
+#  if EVERY tracked device is not home.
+
+- alias: Turn on Lights at Sunset when Occupied
+
+    trigger:
+      - platform: sun
+        event: 'sunset'
+        offset: '-00:59:00'
+        
+    condition:
+      - condition: state
+        entity_id: switch.automation
+        state: 'on'
+        
+      - condition: state
+        entity_id: switch.presence
+        state: 'on'
+        
+      - condition: state
+        entity_id: switch.vacation
+        state: 'off'
+        
+      - condition: state
+        entity_id: group.all_devices
+        state: 'home'
+        
+  action:
+    - service: scene.turn_on
+      entity_id: scene.indoor_lights_sunset

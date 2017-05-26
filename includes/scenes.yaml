@@ -1,61 +1,30 @@
-####################################################
-#                      Scenes                      #
-####################################################
-
 - name: Indoor Lights Sunset
   entities:
     group.sunset_lights:
       state: on
-      brightness: 215
+      brightness: 255
       transition: 3600
-
-- name: Indoor Lights Bedtime
+      
+- name: Indoor Lights Home
   entities:
-    group.sunset_lights:
+    group.home_lights:
       state: on
-      brightness: 64
-      transition: 300
+      brightness: 255
+      transition: 60
 
 - name: Theater On
   entities:
     light.tv_backlight:
       state: on
       brightness: 255
-      xy_color: [0.4596, 0.4105]
-    light.living_room_lamp:
-      state: on
-      brightness: 12
-      xq_color: [0.5134, 0.4149]
 
 - name: Theater Off
   entities:
     light.tv_backlight:
       state: off
-    light.living_room_lamp:
-      state: on
-      brightness: 255
-      xq_color: [0.4596, 0.4105]
 
 - name: Vacation
   entities:
-    group.home_lights:
+    group.all_house_lights:
       state: on
-      brightness: 50
-
-- name: Vacation Disable Automation
-  entities:
-    input_boolean.lights_morning_disable:
-      state: on
-    input_boolean.rainy_day_disable:
-      state: on
-    input_boolean.lights_sunset:
-      state: on
-
-- name: Vacation Enable Automation
-  entities:
-    input_boolean.lights_morning_disable:
-      state: off
-    input_boolean.rainy_day_disable:
-      state: off
-    input_boolean.lights_sunset:
-      state: off
+      brightness: 255

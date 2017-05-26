@@ -1,0 +1,19 @@
+- alias: Turn on lights at sunset when on vacation
+
+    trigger:
+      - platform: sun
+        event: 'sunset'
+        offset: '-00:59:00'
+        
+    condition:
+      - condition: state
+        entity_id: switch.automation
+        state: 'on'
+        
+      - condition: state
+        entity_id: switch.vacation
+        state: 'on'
+        
+  action:
+    - service: scene.turn_on
+      entity_id: scene.indoor_lights_sunset
