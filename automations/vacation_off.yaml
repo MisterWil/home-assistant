@@ -1,17 +1,17 @@
 - alias: Turn off lights at 10pm with a random delay of up to 1hr59m59s
 
-    trigger:
-      - platform: time
-        after: '22:00:00'
+  trigger:
+    - platform: time
+      after: '22:00:00'
         
-    condition:
-      - condition: state
-        entity_id: switch.automation
-        state: 'on'
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
         
-      - condition: state
-        entity_id: switch.vacation
-        state: 'on'
+    - condition: state
+      entity_id: switch.vacation
+      state: 'on'
         
   action:
     - delay: '{{ ((range(0, 1) | random) | int) ~ ":" ~ ((range(1, 59) | random) | int)  ~ ":" ~  ((range(1, 59) | random) | int) }}'
