@@ -1,5 +1,4 @@
 # Based on: https://github.com/happyleavesaoc/my-home-automation/tree/master/homeassistant
-
 homeassistant:
   name: Home
   latitude: !secret home_latitude
@@ -45,7 +44,7 @@ http:
 
 automation: !include_dir_list automation
 binary_sensor: !include_dir_merge_list binary_sensors
-cover: !include !include_dir_merge_list covers
+cover: !include_dir_merge_list covers
 group: !include_dir_merge_named groups
 light: !include_dir_merge_list lights
 logger: !include includes/logger.yaml
