@@ -24,7 +24,11 @@ digital_ocean:
   access_token: !secret digitalocean_api_key
   
 mqtt:
-  embedded:
+  broker: !secret mqtt_broker
+  port: !secret mqtt_port
+  client_id: !secret mqtt_client_id
+  username: !secret mqtt_username
+  password: !secret mqtt_password
   
 #emulated_hue:
 #  host_ip: !secret system_ip
