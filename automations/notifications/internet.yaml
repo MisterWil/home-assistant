@@ -1,0 +1,11 @@
+- alias: Notify all on internet coming back up
+  trigger:
+    platform: state
+    entity_id: sensor.internet
+    from: 'down'
+    to: 'up'
+  action:
+    service: notify.all
+    data:
+      message: >
+        The internet was down and is now back online!

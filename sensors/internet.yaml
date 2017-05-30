@@ -1,0 +1,4 @@
+- platform: command_line
+  name: Internet
+  command: ./scripts/internet_status.sh
+  scan_interval: 60
