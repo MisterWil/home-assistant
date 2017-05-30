@@ -1,4 +1,4 @@
 - platform: command_line
   name: Internet
-  command: ./scripts/internet_status.sh
+  command: bash /home/hass/.homeassistant/scripts/internet_status.sh
   scan_interval: 60

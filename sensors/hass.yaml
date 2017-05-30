@@ -1,7 +1,7 @@
 - platform: command_line
   name: New Commits
   scan_interval: 600
-  command: "git fetch && git log master..origin/master --pretty=oneline | wc -l"
+  command: "cd ~ && git fetch && git log master..origin/master --pretty=oneline | wc -l"
   
 - platform: template
   sensors:
