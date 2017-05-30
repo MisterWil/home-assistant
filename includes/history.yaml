@@ -1,0 +1,8 @@
+include:
+  domains:
+    - device_tracker
+    - light
+    - cover
+    - sensor
+    - switch
+    - binary_sensor

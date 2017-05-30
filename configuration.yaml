@@ -46,9 +46,12 @@ automation: !include_dir_merge_list automations
 binary_sensor: !include_dir_merge_list binary_sensors
 cover: !include_dir_merge_list covers
 group: !include_dir_merge_named groups
+history: !include includes/history.yaml
 light: !include_dir_merge_list lights
 logger: !include includes/logger.yaml
 logbook: !include includes/logbook.yaml
+notify: !include includes/notify.yaml
+recorder: !include includes/recorder.yaml
 remote: !include_dir_merge_list remotes
 scene: !include includes/scenes.yaml
 sensor: !include_dir_merge_list sensors
@@ -58,5 +61,4 @@ zone: !include includes/zones.yaml
 ios:
 sun:
 frontend:
-history:
 config:

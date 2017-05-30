@@ -15,3 +15,15 @@
   longitude: !secret her_work_longitude
   radius: !secret her_work_radius
   icon: mdi:music-note
+
+- name: !secret his_gym_name
+  latitude: !secret his_gym_latitude
+  longitude: !secret his_gym_longitude
+  radius: !secret his_gym_radius
+  icon: mdi:run
+
+- name: !secret her_gym_name
+  latitude: !secret her_gym_latitude
+  longitude: !secret her_gym_longitude
+  radius: !secret her_gym_radius
+  icon: mdi:run

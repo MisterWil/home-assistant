@@ -2,7 +2,7 @@
   switches:
     watch_tv:
       friendly_name: 'Watch TV'
-      value_template: "{% if is_state('sensor.living_room', 'Watch TV') %}on{% else %}off{% endif %}"
+      value_template: "{% if is_state('sensor.living_room_tv', 'WatchTV') %}on{% else %}off{% endif %}"
       turn_on:
         service: remote.turn_on
         data_template:
@@ -13,7 +13,7 @@
         entity_id: remote.living_room
     apple_tv:
       friendly_name: 'Watch AppleTV'
-      value_template: "{% if is_state('sensor.living_room', 'Watch AppleTV') %}on{% else %}off{% endif %}"
+      value_template: "{% if is_state('sensor.living_room_tv', 'Watch AppleTV') %}on{% else %}off{% endif %}"
       turn_on:
         service: remote.turn_on
         data_template:
@@ -24,7 +24,7 @@
         entity_id: remote.living_room
     ps4:
       friendly_name: 'PS4'
-      value_template: "{% if is_state('sensor.living_room', 'PS4') %}on{% else %}off{% endif %}"
+      value_template: "{% if is_state('sensor.living_room_tv', 'PS4') %}on{% else %}off{% endif %}"
       turn_on:
         service: remote.turn_on
         data_template:
@@ -35,7 +35,7 @@
         entity_id: remote.living_room
     nintendo_switch:
       friendly_name: 'Nintendo Switch'
-      value_template: "{% if is_state('sensor.living_room', 'Switch') %}on{% else %}off{% endif %}"
+      value_template: "{% if is_state('sensor.living_room_tv', 'Switch') %}on{% else %}off{% endif %}"
       turn_on:
         service: remote.turn_on
         data_template:

@@ -1,0 +1,15 @@
+- name: all
+  platform: group
+  services:
+    - service: !secret his_ios_service
+    - service: !secret her_ios_service
+    
+- name: him
+  platform: group
+  services:
+    - service: !secret his_ios_service
+    
+- name: her
+  platform: group
+  services:
+    - service: !secret her_ios_service
