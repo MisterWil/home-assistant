@@ -6,4 +6,5 @@
 - platform: template
   sensors:
     home_theater:
-      value_template: "{% if is_state('sensor.living_room_tv', 'PowerOff') %}off{% else %}on{% endif %}"
+      device_class: power
+      value_template: "{% if is_state('sensor.living_room_tv', 'PowerOff') %}Off{% else %}On{% endif %}"

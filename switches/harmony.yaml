@@ -2,7 +2,7 @@
   switches:
     watch_tv:
       friendly_name: 'Watch TV'
-      value_template: "{% if is_state('sensor.living_room_tv', 'WatchTV') %}on{% else %}off{% endif %}"
+      value_template: "{% if is_state('sensor.living_room_tv', 'Watch TV') %}on{% else %}off{% endif %}"
       turn_on:
         service: remote.turn_on
         data_template:
