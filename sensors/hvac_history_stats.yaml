@@ -1,0 +1,26 @@
+- platform: history_stats
+  name: HVAC Last 24 Hours
+  entity_id: binary_sensor.hvac_status
+  state: 'on'
+  type: time
+  end: '{{ now() }}'
+  duration:
+    hours: 24
+    
+- platform: history_stats
+  name: HVAC Last 7 Days
+  entity_id: binary_sensor.hvac_status
+  state: 'on'
+  type: time
+  end: '{{ now() }}'
+  duration:
+    days: 7
+    
+- platform: history_stats
+  name: HVAC Last 30 Days
+  entity_id: binary_sensor.hvac_status
+  state: 'on'
+  type: time
+  end: '{{ now() }}'
+  duration:
+    days: 30

@@ -6,3 +6,4 @@ include:
     - sensor
     - switch
     - binary_sensor
+    - climate

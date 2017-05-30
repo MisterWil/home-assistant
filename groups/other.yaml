@@ -112,7 +112,7 @@ Device Sensors:
   - sensor.sara_schraders_iphone_battery_level
   - binary_sensor.wilpwr
 
-System sensors:
+System Sensors:
   - sensor.cpu_use
   - sensor.ram_use
   - sensor.since_last_boot
@@ -126,6 +126,16 @@ System sensors:
   - sensor.home_assistant_last_restart
   - sensor.new_commits
   - updater.updater
+  
+History:
+  - sensor.his_work_week
+  - sensor.her_work_week
+  - sensor.tv_last_24_hours
+  - sensor.tv_last_7_days
+  - sensor.tv_last_30_days
+  - sensors.hvac_last_24_hours
+  - sensors.hvac_last_7_days
+  - sensors.hvac_last_30_days
 
 Switches:
   control: hidden

@@ -1,0 +1,5 @@
+- platform: template
+  sensors:
+    hvac_status:
+      friendly_name: HVAC Status
+      value_template: '{% if states.climate.downstairs.attributes.operation == 'idle' %}off{% else %}on{% endif%}'
