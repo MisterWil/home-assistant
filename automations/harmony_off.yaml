@@ -2,7 +2,7 @@
 
   trigger:
     - platform: state
-      entity_id: remote.family_room
+      entity_id: remote.living_room
       from: 'on'
       to: 'off'
       
