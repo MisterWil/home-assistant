@@ -133,9 +133,9 @@ History:
   - sensor.tv_last_24_hours
   - sensor.tv_last_7_days
   - sensor.tv_last_30_days
-  - sensors.hvac_last_24_hours
-  - sensors.hvac_last_7_days
-  - sensors.hvac_last_30_days
+  - sensor.hvac_last_24_hours
+  - sensor.hvac_last_7_days
+  - sensor.hvac_last_30_days
 
 Switches:
   control: hidden

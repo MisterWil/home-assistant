@@ -1,0 +1,290 @@
+1) Update all the things
+	sudo apt update && sudo apt dist-upgrade
+	
+2) Ensure that the date is correct and the NTP server is automatically updating
+	- Check the current date and time
+		date
+		
+	- Adjust the timezone
+		sudo cp /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
+			or
+		sudo ln -s /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
+	
+	- Enable ntp service
+		sudo systemctl enable ntp.service
+	
+	- Start ntp service
+		sudo systemctl start ntp.service
+
+3) Create a new user with ssh keys
+	- Create user
+		sudo adduser MYUSER
+		
+	- Give user sudo ability
+		sudo usermod -aG sudo MYUSER
+		
+	- Generate new ssh keys
+		ssh-keygen
+		
+	- Copy ssh keys to new user
+		ssh-copy-id MYUSER@server
+		
+	- Copy ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub to a safe place.
+	
+	- Use id_rsa file to generate putty PPK file
+	
+	- Open sshd config file
+		sudo nano /etc/ssh/sshd_config
+	
+	- Disable password authentication
+		Find line: #PasswordAuthentication yes
+		Change to: PasswordAuthentication no
+		
+	- Save file
+	
+	- Test login to new user with new key file
+	
+	- Reload sshd
+		sudo systemctl reload sshd
+		
+	- Change passwords for other users (odroid, root, etc)
+		sudo passwd odroid
+		sudo passwd root
+		
+4) Set up firewall
+	- List ufw applications
+		sudo ufw app list
+	
+	- Allow OpenSSH
+		sudo ufw allow OpenSSH
+		
+	- Allow http for certbot (Let's Encrypt Certs)
+		sudo ufw allow http
+		
+	- Allow hass port
+		sudo ufw allow 8123
+		
+	- Enable firewall
+		sudo ufw enable
+	
+	- Check status of ufw
+		sudo ufw status
+		
+5) Restart!
+	sudo restart
+	
+6) Set up SSH 2FA
+	- Install the google auth PAM
+		sudo apt-get install libpam-google-authenticator
+		
+	- Run the initialization app
+		google-authenticator
+		
+	- Scan the QR code
+	
+	- Save secret key, verification code, and emergency scratch codes
+	
+	- Finish answering questions
+		Update .google_authenticator file? YES
+		Disallow multiple uses? YES
+		Do you want to increase the window size? NO
+		Enable rate limiting? YES
+		
+	- Configure pam sshd
+		sudo nano /etc/pam.d/sshd
+	
+	- Add line to bottom of file
+		auth required pam_google_authenticator.so
+		
+	- Save and close file
+	
+	- Configure ssh to support google auth
+		sudo nano /etc/ssh/sshd_config
+		
+	- Look for ChallengeResponseAuthentication and set to yes
+	
+	- Add line to bottom of file
+		AuthenticationMethods publickey,password publickey,keyboard-interactive
+	
+	- Save and close file
+	
+	- Restart sshd
+		sudo systemctl restart sshd.service
+	
+	- Test SSH login
+		Public key passphrase from above is still required
+		Password for the account is required
+		Google 2FA token is required
+	
+	- Mostly secure!
+	
+7) Install homeassistant
+	- Install some dependencies
+		sudo apt-get install python-pip python3-dev
+		sudo pip install --upgrade virtualenv
+		
+	- Create homeassistant user and group (system user means no login allowed)
+		sudo adduser --system homeassistant
+		sudo addgroup homeassistant
+	
+	- Add homeassistant user to dialout group for zwave (optional)
+		 sudo usermod -G dialout -a homeassistant
+		 
+	- Create directory for homeassistant
+		sudo mkdir /srv/homeassistant
+		sudo chown homeassistant:homeassistant /srv/homeassistant
+		
+	- Become homeassistant user (-s for system user)
+		sudo su -s /bin/bash homeassistant
+		
+	- Set up virtualenv
+		virtualenv -p python3 /srv/homeassistant
+
+	- Activate virtualenv
+		source /srv/homeassistant/bin/activate
+		
+	- Install homeassistant
+		pip3 install --upgrade homeassistant
+
+	- Exit back to regular user
+	
+	- Create systemd service
+		sudo nano -w /etc/systemd/system/home-assistant@homeassistant.service
+
+	- With contents:
+		[Unit]
+		Description=Home Assistant
+		After=network.target
+
+		[Service]
+		Type=simple
+		User=%i
+		ExecStart=/srv/homeassistant/bin/hass -c "/home/homeassistant/.homeassistant"
+
+		[Install]
+		WantedBy=multi-user.target
+		
+	- Save
+	
+	- Reload systemd
+		sudo systemctl --system daemon-reload
+		
+	- Enable homeassistant
+		sudo systemctl enable home-assistant@homeassistant
+		
+	- Start homeassistant
+		sudo systemctl start home-assistant@homeassistant
+		
+	- To get hass logging output
+		sudo journalctl -f -u home-assistant@homeassistant
+		
+	- To see just errors
+		sudo journalctl -f -u home-assistant@homeassistant | grep -i 'error'
+		
+	- To upgrade hass
+		sudo systemctl stop home-assistant@homeassistant
+		sudo su -s /bin/bash homeassistant
+		source /srv/homeassistant/bin/activate
+		pip3 install --upgrade homeassistant
+		exit
+		sudo systemctl start home-assistant@homeassistant
+		
+8) Set up Let's Encrypt certs
+	- Install Let's Encrypt client
+		sudo add-apt-repository ppa:certbot/certbot
+		sudo apt-get update
+		sudo apt-get install python-certbot
+		
+	- Get certs using standalone plugin
+		sudo certbot certonly --standalone --preferred-challenges http-01 --email my@email.com -d mydomain.com -d www.mydomain.com
+		
+	- Set up directory ownership and chmod directory to allow group access
+		sudo groupadd ssl-cert
+		sudo chown -R root:ssl-cert /etc/letsencrypt/
+		sudo chmod -R 750 /etc/letsencrypt/
+		
+	- Add homeassistant to certs group
+		sudo usermod -a -G ssl-cert homeassistant
+		
+	- To renew certs (might need to chown and chmod again?)
+		sudo systemctl stop home-assistant@homeassistant
+		sudo certbot renew --quiet --no-self-upgrade --standalone --preferred-challenges http-01
+		sudo systemctl start home-assistant@homeassistant
+
+9) Install mosquitto
+	- Install
+		sudo apt-get install mosquitto
+		
+	- Create mosquitto password for HASS
+		sudo mosquitto_passwd -c /etc/mosquitto/passwd hass
+		
+	- Create additional users as required
+		
+	- Configure mosquitto to use passwords
+		sudo nano /etc/mosquitto/conf.d/default.conf
+		
+	- Add mosquitto user to ssl-cert group
+		sudo usermod -a -G ssl-cert mosquitto
+		
+	- Add lines to file
+		persistence true
+		autosave_interval 300
+
+		allow_anonymous false
+		password_file /etc/mosquitto/passwd
+		
+		listener 1883 localhost
+
+		listener 8883
+		certfile /etc/letsencrypt/live/mydomain.com/cert.pem
+		cafile /etc/letsencrypt/live/mydomain.com/chain.pem
+		keyfile /etc/letsencrypt/live/mydomain.com/privkey.pem
+		
+	- Optional, for websockets, add the lines to the file
+		listener 8083
+		protocol websockets
+		certfile /etc/letsencrypt/live/mydomain.com/cert.pem
+		cafile /etc/letsencrypt/live/mydomain.com/chain.pem
+		keyfile /etc/letsencrypt/live/mydomain.com/privkey.pem
+		
+	- Save file
+	
+	- Restart mosquitto
+		sudo systemctl restart mosquitto
+		
+	- Open mosquitto+ssl port in firewall if we're allowing remote access
+		sudo ufw allow 8883
+		
+	- Open mosquitto websocket port in firewall if we're allowing remote websocket access
+		sudo ufw allow 8083
+		
+10) Install git and clone hass config
+	- Install git
+		sudo apt-get install git
+		
+	- Stop hass
+		sudo systemctl stop home-assistant@homeassistant
+		
+	- Switch to hass user
+		sudo su -s /bin/bash homeassistant
+		
+	- CD to hass directory
+		cd ~/.homeassistant
+		
+	- Delete everything (including hidden files)
+		rm -rf *
+		rm .HA_VERSION
+		rm .uuid
+		
+	- Clone repo to current directory
+		git clone https://github.com/MisterWil/home-assistant .
+		
+	- Replace/fill in secrets.yaml
+		
+	- Test config
+		/srv/homeassistant/bin/hass --script check_config
+		
+	- Exit back to main user
+	
+	- Restart hass
+		sudo systemctl start home-assistant@homeassistant
