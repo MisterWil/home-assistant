@@ -2,4 +2,5 @@
   host: !secret hue_host
   allow_in_emulated_hue: false
   allow_unreachable: true
-  scan_interval: 10
+  allow_hue_groups: false
+  scan_interval: 2
