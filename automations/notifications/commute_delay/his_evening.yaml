@@ -1,0 +1,26 @@
+- alias: Commute delay - his evening
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.his_evening
+    above: 40
+  condition:
+    - condition: time
+      after: '15:30:00'
+      before: '17:00:00'
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: state
+      entity_id: switch.his_alert_delays
+      state: 'on'
+    - condition: state
+      entity_id: !secret his_device_tracker
+      state: !secret his_work_name
+  action:
+    service: notify.him
+    data:
+      message: >
+        Commute to home delay of {{ trigger.to_state.state|round }} minutes

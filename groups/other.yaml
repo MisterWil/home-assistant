@@ -128,10 +128,12 @@ System sensors:
   - updater.updater
 
 Switches:
-  - switch.automation
-  - switch.guests
-  - switch.presence
-  - switch.vacation
-  - switch.his_alert_delays
-  - switch.her_alert_delays
-  - switch.tracking_alerts
+  control: hidden
+  entities:
+    - switch.automation
+    - switch.guests
+    - switch.presence
+    - switch.vacation
+    - switch.his_alert_delays
+    - switch.her_alert_delays
+    - switch.tracking_alerts
