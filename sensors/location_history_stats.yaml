@@ -1,0 +1,17 @@
+- platform: history_stats
+  name: her work week
+  friendly_name: !secret her_work_name
+  entity_id: !secret her_device_tracker
+  state: !secret her_work_name
+  type: time
+  start: '{{ as_timestamp( now().replace(hour=0).replace(minute=0).replace(second=0) ) - now().weekday() * 86400 }}'
+  end: '{{ now() }}'
+
+- platform: history_stats
+  name: his work week
+  friendly_name: !secret his_work_name
+  entity_id: !secret his_device_tracker
+  state: !secret his_work_name
+  type: time
+  start: '{{ as_timestamp( now().replace(hour=0).replace(minute=0).replace(second=0) ) - now().weekday() * 86400 }}'
+  end: '{{ now() }}'

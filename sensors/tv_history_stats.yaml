@@ -1,0 +1,26 @@
+- platform: history_stats
+  name: TV Last 24 Hours
+  entity_id: remote.living_room
+  state: 'on'
+  type: time
+  end: '{{ now() }}'
+  duration:
+    hours: 24
+
+- platform: history_stats
+  name: TV Last 7 Days
+  entity_id: remote.living_room
+  state: 'on'
+  type: time
+  end: '{{ now() }}'
+  duration:
+    days: 7
+    
+- platform: history_stats
+  name: TV Last 30 Days
+  entity_id: remote.living_room
+  state: 'on'
+  type: time
+  end: '{{ now() }}'
+  duration:
+    days: 30
