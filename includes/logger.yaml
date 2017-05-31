@@ -1,4 +1,5 @@
 default: info
 logs:
   homeassistant.components.http: warn
+  homeassistant.core: warn
   pycec: warn
