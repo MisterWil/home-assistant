@@ -1,0 +1,53 @@
+- alias: Notify all once per day in the morning when pollen is at least medium-high
+  trigger:
+    - platform: time
+      after: '07:00:00'
+
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.pollen
+      above: 7.3
+    
+  action:
+    - service: notify.all
+      data:
+        message: >
+          The pollen forcast for today is: 
+          {% if float(states.sensor.pollen.state) >= 0 and float(states.sensor.pollen.state) <= 2.3 -%}
+          low
+          {%- elif float(states.sensor.pollen.state) >= 2.4 and float(states.sensor.pollen.state) <= 4.8 -%}
+          low-medium
+          {%- elif float(states.sensor.pollen.state) >= 4.9 and float(states.sensor.pollen.state) <= 7.2 -%}
+          medium 
+          {%- elif float(states.sensor.pollen.state) >= 7.3 and float(states.sensor.pollen.state) <= 9.6 -%}
+          medium-high
+          {%- else -%}
+          high
+          {%- endif %}
+           
+- alias: Notify all once per day in the morning when cold/flu is at least medium
+  trigger:
+    - platform: time
+      after: '07:00:00'
+
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.cold_flu
+      above: 4.9
+    
+  action:
+    - service: notify.all
+      data:
+        message: >
+          The cold & flu forcast for today is: 
+          {% if float(states.sensor.cold_flu.state) >= 0 and float(states.sensor.cold_flu.state) <= 2.3 -%}
+          low
+          {%- elif float(states.sensor.cold_flu.state) >= 2.4 and float(states.sensor.cold_flu.state) <= 4.8 -%}
+          low-medium
+          {%- elif float(states.sensor.cold_flu.state) >= 4.9 and float(states.sensor.cold_flu.state) <= 7.2 -%}
+          medium 
+          {%- elif float(states.sensor.cold_flu.state) >= 7.3 and float(states.sensor.cold_flu.state) <= 9.6 -%}
+          medium-high
+          {%- else -%}
+          high
+          {%- endif %}
