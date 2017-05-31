@@ -2,4 +2,4 @@
   sensors:
     hvac_status:
       friendly_name: HVAC Status
-      value_template: "{{ states.climate.downstairs.attributes.operation != 'idle' and states.climate.upstairs.attributes.operation != 'idle' }}"
+      value_template: "{{ states.climate.downstairs.attributes.operation != 'idle' or states.climate.upstairs.attributes.operation != 'idle' }}"
