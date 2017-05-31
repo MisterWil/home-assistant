@@ -91,6 +91,8 @@ Weather Overview:
   - sensor.dark_sky_summary
   - sensor.dark_sky_temperature
   - sensor.dark_sky_humidity
+  - sensor.pollen
+  - sensor.cold_flu
 
 Weather Wind Rain:
   - sensor.dark_sky_wind_speed
@@ -123,7 +125,7 @@ System Sensors:
   - sensor.speedtest_download
   - sensor.speedtest_upload
   - sensor.speedtest_ping
-  - sensor.home_assistant_last_restart
+  - sensor.hass_uptime
   - sensor.new_commits
   - updater.updater
   
