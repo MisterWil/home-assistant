@@ -57,7 +57,7 @@
         - fri
       
   action:
-    - service: notify.all
+    - service: notify.her
       data:
         message: >
           Your husband has left work!
@@ -85,7 +85,7 @@
         - fri
       
   action:
-    - service: notify.all
+    - service: notify.her
       data:
         message: >
           Your husband has left work and will be home in {{ states.sensor.his_evening.state }} minutes!
