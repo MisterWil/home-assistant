@@ -33,8 +33,8 @@
       data:
         message: >
           Your husband has arrived at work safe and sound!
-        
-- alias: He leaves work
+
+- alias: He leaves work midday
   trigger:
     - platform: state
       entity_id: !secret his_device_tracker
@@ -46,8 +46,46 @@
       entity_id: switch.tracking_alerts
       state: 'on'
       
+    - condition: time
+      after: '09:00:00'
+      before: '15:00:00'
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+      
   action:
-    - service: notify.her
+    - service: notify.all
+      data:
+        message: >
+          Your husband has left work!
+          
+- alias: He leaves work to probably go home
+  trigger:
+    - platform: state
+      entity_id: !secret his_device_tracker
+      from: !secret his_work_name
+      to: 'not_home'
+      
+  condition:
+    - condition: state
+      entity_id: switch.tracking_alerts
+      state: 'on'
+      
+    - condition: time
+      after: '15:00:00'
+      before: '17:30:00'
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+      
+  action:
+    - service: notify.all
       data:
         message: >
           Your husband has left work and will be home in {{ states.sensor.his_evening.state }} minutes!
