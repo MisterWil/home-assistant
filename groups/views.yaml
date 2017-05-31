@@ -55,3 +55,4 @@ Sensors:
     - group.device_sensors
     - group.system_sensors
     - group.history
+    - group.packages

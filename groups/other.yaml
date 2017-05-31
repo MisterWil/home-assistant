@@ -136,6 +136,11 @@ History:
   - sensor.hvac_last_24_hours
   - sensor.hvac_last_7_days
   - sensor.hvac_last_30_days
+  
+Packages:
+  - sensor.fedex
+  - sensor.usps
+  - sensor.ups
 
 Switches:
   control: hidden
