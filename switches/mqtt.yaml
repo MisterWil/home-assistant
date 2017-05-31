@@ -95,3 +95,12 @@
   payload_on: "yes"
   payload_off: "no"
   retain: true
+  
+- platform: mqtt
+  name: internet_down
+  state_topic: "var/internet_down"
+  command_topic: "var/internet_down"
+  qos: 1
+  payload_on: "yes"
+  payloaf_off: "no"
+  retain: false

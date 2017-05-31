@@ -1,11 +1,33 @@
-- alias: Notify all on internet coming back up
+- alias: Flip mqtt variable switch if internet goes down
   trigger:
-    platform: state
-    entity_id: sensor.internet
-    from: 'down'
-    to: 'up'
+    - platform: state
+      entity_id: sensor.internet
+      from: 'up'
+      to: 'down'
+      for:
+        minutes: 5
+    
   action:
-    service: notify.all
-    data:
-      message: >
-        The internet was down and is now back online!
+    - service: switch.turn_on
+      entity_id: switch.internet_down
+
+- alias: Notify him on internet coming back up
+  trigger:
+    - platform: state
+      entity_id: sensor.internet
+      from: 'down'
+      to: 'up'
+      
+  condition:
+    - platform: state
+      entity_id: switch.internet_down
+      state: 'on'
+    
+  action:
+    - service: notify.him
+      data:
+        message: >
+          The internet was down and is now back online!
+          
+    - service: switch.turn_off
+      entity_id: switch.internet_down

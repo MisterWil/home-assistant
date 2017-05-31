@@ -2,9 +2,11 @@
 
 - alias: Notify him on HASS startup
   trigger:
-    platform: homeassistant
-    event: start
+    - platform: homeassistant
+      event: start
+      
   action:
-    service: notify.him
-    data:
-      message: "Home Assistant has started!"
+    - service: notify.him
+      data:
+        message: >
+          Home Assistant has started!
