@@ -88,4 +88,4 @@
     - service: notify.him
       data:
         message: >
-          Your wife has left work and will be home in {{ states.sensor.his_evening.state }} minutes!
+          Your wife has left work and will be home in {{ states.sensor.her_evening.state }} minutes!
