@@ -1,6 +1,8 @@
 #  pollen_url: https://www.pollen.com/api/forecast/current/pollen/ZIPCODE
 - platform: rest
   name: pollen
+  friendly_name: Pollen
+  icon: mdi:flower
   resource: !secret pollen_url
   value_template: "{{value_json.Location.periods[1].Index}}"
   scan_interval: 21600
@@ -10,6 +12,8 @@
 #  cold_flu_url: https://www.pollen.com/api/forecast/current/cold/ZIPCODE
 - platform: rest
   name: cold_flu
+  friendly_name: Cold & Flu
+  icon: mdi:emoticon-dead
   resource: !secret cold_flu_url
   value_template: "{{value_json.Location.periods[0].Index}}"
   scan_interval: 21600
