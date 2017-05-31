@@ -19,7 +19,7 @@
       to: 'up'
       
   condition:
-    - platform: state
+    - condition: state
       entity_id: switch.internet_down
       state: 'on'
     

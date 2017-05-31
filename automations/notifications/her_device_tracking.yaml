@@ -27,6 +27,7 @@
     - condition: state
       entity_id: switch.tracking_alerts
       state: 'on'
+      
   action:
     - service: notify.him
       data:
