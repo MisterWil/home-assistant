@@ -91,16 +91,16 @@
       delay: 00:00:10
           
     - service: blink.snap_picture
-      data:
-        data_template: "{{ states.camera.backyard.attributes.friendly_name }}"
+      data_template:
+        friendly_name: "{{ states.camera.backyard.attributes.friendly_name }}"
       delay: 00:00:10
           
     - service: blink.snap_picture
-      data:
-        data_template: "{{ states.camera.master_bedroom.attributes.friendly_name }}"
+      data_template:
+        friendly_name: "{{ states.camera.master_bedroom.attributes.friendly_name }}"
       delay: 00:00:10
           
     - service: blink.snap_picture
-      data:
-        data_template: "{{ states.camera.closet.attributes.friendly_name }}"
+      data_template:
+        friendly_name: "{{ states.camera.closet.attributes.friendly_name }}"
       delay: 00:00:10
