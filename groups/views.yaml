@@ -11,9 +11,9 @@ Living Room:
   view: yes
   icon: mdi:sofa
   entities:
+    - camera.downstairs
     - group.theater
     - group.downstairs_climate
-    - group.blink_downstairs
     - light.living_room
     - light.tv_backlight
 
@@ -21,17 +21,17 @@ Loft:
   view: yes
   icon: mdi:stairs
   entities:
+    - camera.loft
     - group.upstairs_climate
-    - group.blink_loft
     - light.loft_light
 
 Bedrooms:
   view: yes
   icon: mdi:hotel
   entities:
+    - camera.master_bedroom
+    - camera.closet
     - group.bedroom_climate
-    - group.blink_bedroom
-    - group.blink_closet
     - light.master_bedroom
     - light.nightstand
     - light.guest_room_light
@@ -40,10 +40,10 @@ Exterior:
   view: yes
   icon: mdi:tree
   entities:
+    - camera.backyard
     - group.weather_overview
     - group.weather_wind_rain
     - group.weather_report
-    - group.blink_backyard
 
 Automation:
   view: yes

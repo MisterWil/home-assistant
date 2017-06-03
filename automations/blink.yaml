@@ -1,0 +1,106 @@
+- alias: Arm the Blink system when everyone leaves the house
+
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      state: 'not_home'
+      
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.presence
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.vacation
+      state: 'off'
+      
+    - condition: state
+      entity_id: switch.guests
+      state: 'off'
+      
+    - condition: state
+      entity_id: binary_sensor.blink_armed_status
+      state: 'off'
+      
+  action:
+    - service: blink.arm_system
+      data:
+        device_armed: 'True'
+        
+- alias: Disarm the Blink system when someone gets home
+
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      state: 'home'
+      
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.presence
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.vacation
+      state: 'off'
+      
+    - condition: state
+      entity_id: switch.guests
+      state: 'off'
+      
+    - condition: state
+      entity_id: binary_sensor.blink_armed_status
+      state: 'on'
+      
+  action:
+    - service: blink.arm_system
+      data:
+        device_armed: 'False'
+        
+- alias: Update pictures once a day at noon
+
+  trigger:
+    - platform: time
+      after: '12:00:00'
+      
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.guests
+      state: 'off'
+      
+  action:
+    - service: blink.snap_picture
+      data:
+        friendly_name: >
+          {{ states.camera.loft.attributes.friendly_name }}
+          
+    - service: blink.snap_picture
+      data:
+        friendly_name: >
+          {{ states.camera.downstairs.attributes.friendly_name }}
+          
+    - service: blink.snap_picture
+      data:
+        friendly_name: >
+          {{ states.camera.backyard.attributes.friendly_name }}
+          
+    - service: blink.snap_picture
+      data:
+        friendly_name: >
+          {{ states.camera.master_bedroom.attributes.friendly_name }}
+          
+    - service: blink.snap_picture
+      data:
+        friendly_name: >
+          {{ states.camera.closet.attributes.friendly_name }}

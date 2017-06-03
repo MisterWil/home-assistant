@@ -1,1 +1,10 @@
-
+binary_sensor.blink_armed_status:
+  friendly_name: Blink
+  
+sensor.pollen:
+  friendly_name: Pollen
+  icon: mdi:flower
+  
+sensor.cold_flu:
+  friendly_name: Cold & Flu
+  icon: mdi:emoticon-dead
