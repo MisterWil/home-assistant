@@ -30,6 +30,10 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
   
+blink:
+  username: !secret blink_username
+  password: !secret blink_password
+  
 #emulated_hue:
 #  host_ip: !secret system_ip
 #  type: alexa
