@@ -5,7 +5,7 @@ default_view:
     - group.family
     - group.commute
     - group.hue_lights
-    - group.climate_overview
+    - group.house_overview
     
 Living Room:
   view: yes
@@ -13,6 +13,7 @@ Living Room:
   entities:
     - group.theater
     - group.downstairs_climate
+    - group.blink_downstairs
     - light.living_room
     - light.tv_backlight
 
@@ -21,6 +22,7 @@ Loft:
   icon: mdi:stairs
   entities:
     - group.upstairs_climate
+    - group.blink_loft
     - light.loft_light
 
 Bedrooms:
@@ -28,6 +30,8 @@ Bedrooms:
   icon: mdi:hotel
   entities:
     - group.bedroom_climate
+    - group.blink_bedroom
+    - group.blink_closet
     - light.master_bedroom
     - light.nightstand
     - light.guest_room_light
@@ -39,6 +43,7 @@ Exterior:
     - group.weather_overview
     - group.weather_wind_rain
     - group.weather_report
+    - group.blink_backyard
 
 Automation:
   view: yes

@@ -12,7 +12,8 @@ Theater:
     - switch.ps4
     - switch.nintendo_switch
 
-Climate Overview:
+House Overview:
+  - binary_sensor.blink_armed_status
   - climate.downstairs
   - climate.upstairs
   
@@ -154,3 +155,38 @@ Switches:
     - switch.his_alert_delays
     - switch.her_alert_delays
     - switch.tracking_alerts
+    
+Blink Downstairs:
+  - camera.downstairs
+  - binary_sensor.blink_downstairs_motion_enabled
+  - sensor.blink_downstairs_battery
+  - sensor.blink_downstairs_notifications
+  - sensor.blink_downstairs_temperature
+
+Blink Loft:
+  - camera.loft
+  - binary_sensor.blink_loft_motion_enabled
+  - sensor.blink_loft_battery
+  - sensor.blink_loft_notifications
+  - sensor.blink_loft_temperature
+  
+Blink Bedroom:
+  - camera.master_bedroom
+  - binary_sensor.blink_master_bedroom_motion_enabled
+  - sensor.blink_master_bedroom_battery
+  - sensor.blink_master_bedroom_notifications
+  - sensor.blink_master_bedroom_temperature
+  
+Blink Closet:
+  - camera.closet
+  - binary_sensor.blink_closet_motion_enabled
+  - sensor.blink_closet_battery
+  - sensor.blink_closet_notifications
+  - sensor.blink_closet_temperature
+  
+Blink Backyard:
+  - camera.backyard
+  - binary_sensor.blink_backyard_motion_enabled
+  - sensor.blink_backyard_battery
+  - sensor.blink_backyard_notifications
+  - sensor.blink_backyard_temperature
