@@ -3,7 +3,7 @@
   trigger:
     - platform: state
       entity_id: group.all_devices
-      state: 'not_home'
+      to: 'not_home'
       
   condition:
     - condition: state
@@ -68,7 +68,7 @@
 
   trigger:
     - platform: time
-      after: '12:00:00'
+      at: '12:00:00'
       
   condition:
     - condition: state
