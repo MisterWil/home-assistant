@@ -9,7 +9,7 @@ sensor.cold_flu:
   friendly_name: Cold & Flu
   icon: mdi:emoticon-dead
   
-sensor.usps_mail
+sensor.usps_mail:
   friendly_name: USPS Mail
   
 sensor.deliveries_today:
