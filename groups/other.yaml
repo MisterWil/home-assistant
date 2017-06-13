@@ -141,9 +141,9 @@ History:
   - sensor.hvac_last_30_days
   
 Packages:
-  - sensor.fedex
-  - sensor.usps
-  - sensor.ups
+  - sensor.usps_mail
+  - sensor.deliveries_today
+  - sensor.packages_in_transit
 
 Switches:
   control: hidden
