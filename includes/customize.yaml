@@ -8,3 +8,12 @@ sensor.pollen:
 sensor.cold_flu:
   friendly_name: Cold & Flu
   icon: mdi:emoticon-dead
+  
+sensor.usps_mail
+  friendly_name: USPS Mail
+  
+sensor.deliveries_today:
+  icon: mdi:package-variant
+  
+sensor.packages_in_transit:
+  icon: mdi:truck-delivery

@@ -1,0 +1,12 @@
+- alias: Announce package delivery
+  trigger:
+    platform: state
+    entity_id: sensor.deliveries_today
+  condition:
+    - condition: template
+      value_template: '{{trigger.to_state.state|int > trigger.from_state.state|int}}'
+  action:
+    - service: notify.all
+      data:
+        message: >
+          A package has been delivered!
