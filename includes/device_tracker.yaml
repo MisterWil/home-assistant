@@ -1,6 +1,6 @@
 - platform: owntracks
   max_gps_accuracy: 200
-  track_new_devices: True
+  track_new_devices: no
   
 - platform: asuswrt
   host: 192.168.1.1
@@ -8,6 +8,9 @@
   mode: router
   username: !secret asuswrt_username
   password: !secret asuswrt_password
-  track_new_devices: False
+  track_new_devices: no
   
 - platform: bluetooth_tracker
+  interval_seconds: 10
+  consider_home: 120
+  track_new_devices: no
