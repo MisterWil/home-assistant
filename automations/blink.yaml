@@ -22,10 +22,6 @@
       entity_id: switch.guests
       state: 'off'
       
-    - condition: state
-      entity_id: binary_sensor.blink_armed_status
-      state: 'off'
-      
   action:
     - service: blink.arm_system
       data:
@@ -54,10 +50,6 @@
     - condition: state
       entity_id: switch.guests
       state: 'off'
-      
-    - condition: state
-      entity_id: binary_sensor.blink_armed_status
-      state: 'on'
       
   action:
     - service: blink.arm_system
