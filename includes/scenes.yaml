@@ -25,6 +25,6 @@
 
 - name: Vacation
   entities:
-    group.all_house_lights:
+    group.home_lights:
       state: on
       brightness: 255
