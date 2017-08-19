@@ -34,6 +34,13 @@ blink:
   username: !secret blink_username
   password: !secret blink_password
   
+panel_custom:
+  - name: floorplan
+    sidebar_title: Floorplan
+    sidebar_icon: mdi:home
+    url_path: floorplan
+    config: !include floorplan.yaml
+  
 #emulated_hue:
 #  host_ip: !secret system_ip
 #  type: alexa
