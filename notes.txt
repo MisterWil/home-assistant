@@ -197,7 +197,10 @@
 		
 	- Get certs using standalone plugin
 		sudo certbot certonly --standalone --preferred-challenges http-01 --email my@email.com -d mydomain.com -d www.mydomain.com
-		
+	
+    - Alternative, to use 443 through port 8123:
+         sudo certbot certonly --standalone --preferred-challenges tls-sni-01 --tls-sni-01-port 8123 --email my@email.com -d mydomain.com -d www.mydomain.com
+    
 	- Set up directory ownership and chmod directory to allow group access
 		sudo groupadd ssl-cert
 		sudo chown -R root:ssl-cert /etc/letsencrypt/
@@ -210,6 +213,9 @@
 		sudo systemctl stop home-assistant@homeassistant
 		sudo certbot renew --quiet --no-self-upgrade --standalone --preferred-challenges http-01
 		sudo systemctl start home-assistant@homeassistant
+        
+    - To renew with 443 through port 8123:
+        sudo certbot renew --no-self-upgrade --standalone --preferred-challenges tls-sni-01 --tls-sni-01-port 8123
 
 9) Install mosquitto
 	- Install
