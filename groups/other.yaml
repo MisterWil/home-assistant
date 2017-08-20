@@ -1,6 +1,6 @@
 Family:
-  - device_tracker.sara_schraders_iphone
-  - device_tracker.wils_iphone
+  - !secret his_device_tracker
+  - !secret her_device_tracker
   - sensor.neighborhood_incidents
   
 Theater:
