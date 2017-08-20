@@ -1,0 +1,4 @@
+camera:
+  - platform: generic
+    still_image_url: 'https://icons.wxug.com/data/weather-maps/radar/united-states/prescott-arizona-region-current-radar.gif'
+    name: WU Doppler Weather
