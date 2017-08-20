@@ -42,8 +42,8 @@ groups:
 
   - name: thermostats_temp
     entities:
-      - sensor.downstairs_temperature
-      - sensor.downstairs_temperature
+      - climate.downstairs
+      - climate.upstairs
     text_template: '${entity.attributes.current_temperature ? Math.ceil(entity.attributes.current_temperature) + "°": "undefined"}'
     class_template: 'return "static-temp";'
 

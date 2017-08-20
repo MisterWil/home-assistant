@@ -85,9 +85,9 @@
      gridtolerance="10"
      guidetolerance="10"
      id="namedview1002"
-     inkscape:current-layer="g833"
-     inkscape:cx="826.31509"
-     inkscape:cy="270.4864"
+     inkscape:current-layer="svg559"
+     inkscape:cx="489.0926"
+     inkscape:cy="351.08481"
      inkscape:guide-bbox="true"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
@@ -96,7 +96,7 @@
      inkscape:window-width="1920"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:zoom="1.5150316"
+     inkscape:zoom="1.0712891"
      objecttolerance="10"
      pagecolor="#ffffff"
      showgrid="false"
@@ -122,7 +122,8 @@
        orientation="1,0"
        position="187.48304,437.38222" /></sodipodi:namedview><title
      id="title598">Artboard 2</title><g
-     id="Floor_Plan"><rect
+     id="Floor_Plan"
+     inkscape:label="Floor_Plan"><rect
        id="Background"
        y="0"
        class="st0"
@@ -145,9 +146,10 @@
            style="font-size:17.93000031px;font-family:Helvetica-Bold;fill:#ffffa6">Friday, June 30</text>
 </g><g
          id="sensor.floorplan_time"><text
-           transform="matrix(1 0 0 1 35.34 100.4411)"
+           transform="translate(35.34,100.4411)"
            class="st2 st3 st5"
-           id="text4525">9:36 PM</text>
+           id="text4525"
+           style="font-size:37.70859909px;font-family:Helvetica-Bold;fill:#ffffa6">9:36 PM</text>
 </g></g><g
        id="Buttons"><g
          id="Refresh"
@@ -193,10 +195,14 @@
          id="Left_Buttons"><path
            id="rect320_2_"
            class="st1"
-           d="M264.5,250.9H37.2c-6.8,0-12.3-5.5-12.3-12.3V193c0-6.8,5.5-12.3,12.3-12.3h227.2     c6.8,0,12.3,5.5,12.3,12.3v45.7C276.8,245.5,271.3,250.9,264.5,250.9z" /><path
+           d="M 264.5,250.9 H 37.2 c -6.8,0 -12.3,-5.5 -12.3,-12.3 V 193 c 0,-6.8 5.5,-12.3 12.3,-12.3 h 227.2 c 6.8,0 12.3,5.5 12.3,12.3 v 45.7 c 0.1,6.8 -5.4,12.2 -12.2,12.2 z"
+           inkscape:connector-curvature="0"
+           style="fill:#3d3b3f" /><path
            id="rect326_1_"
            class="st1"
-           d="M265.4,329.8H38.1c-6.8,0-12.3-5.5-12.3-12.3v-45.7c0-6.8,5.5-12.3,12.3-12.3h227.2     c6.8,0,12.3,5.5,12.3,12.3v45.7C277.6,324.3,272.1,329.8,265.4,329.8z" /><text
+           d="M 265.4,329.8 H 38.1 c -6.8,0 -12.3,-5.5 -12.3,-12.3 v -45.7 c 0,-6.8 5.5,-12.3 12.3,-12.3 h 227.2 c 6.8,0 12.3,5.5 12.3,12.3 v 45.7 c 0,6.8 -5.5,12.3 -12.2,12.3 z"
+           inkscape:connector-curvature="0"
+           style="fill:#3d3b3f" /><text
            id="text823"
            class="st2 st23 st24"
            x="34.252602"
@@ -217,7 +223,9 @@
 <path
            id="rect339"
            class="st1"
-           d="M31.7,120.3h109.6c3.7,0,6.7,3.9,6.7,8.8v31.7c0,4.8-3,8.8-6.7,8.8H31.7     c-3.7,0-6.7-3.9-6.7-8.8V129C25,124.2,28,120.3,31.7,120.3z" /><text
+           d="m 31.7,120.3 h 109.6 c 3.7,0 6.7,3.9 6.7,8.8 v 31.7 c 0,4.8 -3,8.8 -6.7,8.8 H 31.7 C 28,169.6 25,165.7 25,160.8 V 129 c 0,-4.8 3,-8.7 6.7,-8.7 z"
+           inkscape:connector-curvature="0"
+           style="fill:#3d3b3f" /><text
            id="text837"
            class="st2 st23 st4"
            x="33.606407"
@@ -226,10 +234,13 @@
 <path
            id="rect348"
            class="st1"
-           d="M160.5,120.4H270c3.7,0,6.7,4.9,6.7,9.8v31.7c0,4.8-3,7.8-6.7,7.8H160.5     c-3.7,0-6.7-3.9-6.7-8.8v-31.7C153.8,124.3,156.8,120.4,160.5,120.4z" /><text
+           d="M 160.5,120.4 H 270 c 3.7,0 6.7,4.9 6.7,9.8 v 31.7 c 0,4.8 -3,7.8 -6.7,7.8 H 160.5 c -3.7,0 -6.7,-3.9 -6.7,-8.8 v -31.7 c 0,-4.9 3,-8.8 6.7,-8.8 z"
+           inkscape:connector-curvature="0"
+           style="fill:#3d3b3f" /><text
            id="text843"
-           transform="matrix(1 0 0 1 161.9286 138.2629)"
-           class="st2 st23 st4">Second Floor</text>
+           transform="translate(161.9286,138.2629)"
+           class="st2 st23 st4"
+           style="font-size:17.93000031px;font-family:Helvetica;fill:#ffffa6">Second Floor</text>
 <path
            id="path5264-8"
            inkscape:connector-curvature="0"
@@ -376,7 +387,7 @@
 <g
      inkscape:label="#climate.downstairs"
      transform="translate(21.312394,67.123371)"
-     id="sensor.downstairs_temperature"><text
+     id="climate.downstairs"><text
        transform="translate(13.1829,95.6504)"
        id="text957-6">XX</text>
 </g><text
@@ -387,7 +398,7 @@
 <g
      inkscape:label="#climate.upstairs"
      transform="translate(21.68449,126.0939)"
-     id="sensor.upstairs_temperature"><text
+     id="climate.upstairs"><text
        transform="translate(141.943,35.4332)"
        id="text957-6-0">XX</text>
 </g><text
@@ -1241,20 +1252,7 @@
              inkscape:connector-curvature="0"
              id="path15215"
              d="M 8.734375,0 H 6.28125 V -17.140625 H 0.265625 V -19.28125 H 14.71875 v 2.140625 H 8.734375 Z"
-             style="stroke:none" /></g></g><ellipse
-         id="light.living_room"
-         class="st2"
-         transform="rotate(-90)"
-         style="fill:#ffffa6;stroke-width:3.03679991"
-         ry="15.494086"
-         rx="14.880118"
-         cy="1050.3667"
-         cx="-931.10901" /><path
-         inkscape:connector-curvature="0"
-         id="light.tv_backlight"
-         class="st2"
-         d="m 1097.6041,809.11216 c 0,-8.3328 7.1272,-14.8801 15.4941,-14.8801 v 0 30.0578 c -8.6767,-0.2976 -15.4941,-6.8448 -15.4941,-15.1777 z"
-         style="fill:#ffffa6;stroke-width:3.03679991" /><path
+             style="stroke:none" /></g></g><path
          inkscape:connector-curvature="0"
          id="cover.garage_door"
          class="st21"
@@ -2660,39 +2658,7 @@
              inkscape:connector-curvature="0"
              id="path11898-5"
              d="M 7,0 3,-10.640625 H 2.9375 c 0.082031,0.886719 0.125,1.980469 0.125,3.28125 V 0 H 1.65625 v -12.140625 h 2.25 l 3.75,9.953125 h 0.0625 l 3.8125,-9.953125 h 2.234375 V 0 h -1.5 v -7.46875 c 0,-0.820312 0.03516,-1.875 0.109375,-3.15625 H 12.3125 L 8.265625,0 Z"
-             style="stroke:none" /></g></g><ellipse
-         id="light.guest_room_light"
-         class="st2"
-         style="fill:#ffffa6;stroke-width:2.90542388"
-         cy="973.90674"
-         cx="542.03296"
-         rx="14.403863"
-         ry="14.651432"
-         transform="rotate(-90)" /><ellipse
-         id="light.loft_light"
-         class="st2"
-         style="fill:#ffffa6;stroke-width:2.90542388"
-         cy="759.21692"
-         cx="-250.87604"
-         rx="14.403863"
-         ry="14.651432"
-         transform="rotate(-90)" /><ellipse
-         id="light.nightstand"
-         class="st2"
-         style="fill:#ffffa6;stroke-width:2.90542388"
-         cy="438.14941"
-         cx="-1112.2377"
-         rx="14.403863"
-         ry="14.651432"
-         transform="rotate(-90)" /><ellipse
-         id="light.master_bedroom"
-         class="st2"
-         style="fill:#ffffa6;stroke-width:2.90542388"
-         cy="809.50464"
-         cx="-1041.8835"
-         rx="14.403863"
-         ry="14.651432"
-         transform="rotate(-90)" /></g><g
+             style="stroke:none" /></g></g></g><g
        id="g16609-7"
        transform="matrix(0,0.32270376,-0.33601883,0,707.30595,191.03192)"><path
          inkscape:connector-curvature="0"
@@ -2770,4 +2736,42 @@
          inkscape:connector-curvature="0"
          id="path14147-6"
          d="M 780.64345,15.143316 C 770.39359,9.9813146 760.14362,4.8243173 749.89376,-0.33768361 c 0.66704,2.83109621 1.32865,5.66219251 1.99027,8.49829231 -5.39613,-0.019976 -10.79767,-0.035054 -16.19369,-0.055029 0,4.8668873 0,9.7337653 0,14.5956493 5.23879,0 10.4831,0 15.72731,0 -0.5098,2.686041 -1.01408,5.372083 -1.52389,8.058124 10.24986,-5.207023 20.49983,-10.409033 30.74969,-15.616047 z"
-         style="fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.14704171;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1" /></g></g></svg>
+         style="fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.14704171;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1" /></g></g><g
+     id="g5038"
+     inkscape:label="Lights"><circle
+       cx="966.11987"
+       cy="220.36815"
+       style="fill:#ffffa6;stroke-width:0.99999994"
+       class="st2"
+       id="light.guest_room_light"
+       r="5" /><path
+       inkscape:connector-curvature="0"
+       id="light.tv_backlight"
+       class="st2"
+       d="m 441.40763,570.74001 c 2.7723,0 4.9505,2.29997 4.9505,5 v 0 h -10 c 0.099,-2.8 2.2772,-5 5.0495,-5 z"
+       style="fill:#ffffa6;stroke-width:0.99503744" /><circle
+       id="light.living_room"
+       class="st2"
+       transform="rotate(-90)"
+       style="fill:#ffffa6;stroke-width:1"
+       cy="389.6423"
+       cx="-558.76941"
+       r="5" /><circle
+       cx="687.14429"
+       cy="138.70123"
+       style="fill:#ffffa6;stroke-width:0.99999994"
+       class="st2"
+       id="light.loft_light"
+       r="5" /><circle
+       cx="385.34021"
+       cy="34.733322"
+       style="fill:#ffffa6;stroke-width:0.99999994"
+       class="st2"
+       id="light.nightstand"
+       r="5" /><circle
+       cx="380.82507"
+       cy="174.53171"
+       style="fill:#ffffa6;stroke-width:0.99999994"
+       class="st2"
+       id="light.master_bedroom"
+       r="5" /></g></svg>
