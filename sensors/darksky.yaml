@@ -20,6 +20,6 @@
 #  - pressure
 #  - visibility
 #  - ozone
-#  - minutely_summary
+  - minutely_summary
   - hourly_summary
   - daily_summary

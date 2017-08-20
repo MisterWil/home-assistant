@@ -21,13 +21,29 @@ devices:
     entities:
       - binary_sensor.alarm_panel_2
       - media_player.alarm_panel_2
+      
+entities:
+
+  - name: input_booleans
+    entities:
+      - switch.guests
+      - input_boolean.good_night
+      
+    states:
+      - state: 'on'
+        class: 'button-on'
+      - state: 'off'
+        class: 'button-off'
+    action:
+      domain: homeassistant
+      service: toggle
 
 groups:
 
   - name: thermostats_temp
     entities:
-      - climate.downstairs
-      - climate.upstairs
+      - sensor.downstairs_temperature
+      - sensor.downstairs_temperature
     text_template: '${entity.attributes.current_temperature ? Math.ceil(entity.attributes.current_temperature) + "°": "undefined"}'
     class_template: 'return "static-temp";'
 
@@ -84,3 +100,28 @@ groups:
         class: 'text-home'
       - state: 'not_home'
         class: 'text-away'
+        
+  - name: Lights
+    entities:
+      - light.living_room
+      - light.guest_room_light
+      - light.loft_light
+      - light.master_bedroom
+      - light.nightstand
+      - light.tv_backlight
+    states:
+      - state: 'on'
+        class: 'light-on'
+      - state: 'off'
+        class: 'light-off'
+    action:
+      service: toggle
+      
+  - name: Garage Door
+    entities:
+      - cover.garage_door
+    states:
+      - state: 'closed'
+        class: 'window-closed'
+      - state: 'open'
+        class: 'window-open'
