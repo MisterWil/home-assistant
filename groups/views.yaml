@@ -16,6 +16,7 @@ Living Room:
     - group.downstairs_climate
     - light.living_room
     - light.tv_backlight
+    - group.living_room_plant
 
 Loft:
   view: yes
@@ -62,3 +63,4 @@ Sensors:
     - group.system_sensors
     - group.history
     - group.packages
+    
