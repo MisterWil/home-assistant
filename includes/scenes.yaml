@@ -28,3 +28,16 @@
     group.home_lights:
       state: on
       brightness: 255
+
+- name: Outdoor Lights Sunset
+  entities:
+    group.sunset_lights:
+      state: on
+      brightness: 255
+      transition: 1800
+
+- name: Outdoor Lights Sunrise
+  entities:
+    group.sunset_lights:
+      state: off
+      transition: 1800

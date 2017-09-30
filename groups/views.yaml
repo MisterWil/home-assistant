@@ -44,6 +44,7 @@ Exterior:
     - group.weather_overview
     - group.weather_wind_rain
     - group.weather_report
+    - group.outdoor_lights
 
 Automation:
   view: yes

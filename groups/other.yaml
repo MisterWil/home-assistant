@@ -74,6 +74,9 @@ Hue lights:
   - light.guest_room_light
   - light.master_bedroom
   - light.nightstand
+  - light.front_porch
+  - light.garage_left
+  - light.garage_right
 
 Sunset Lights:
   - light.living_room
@@ -86,6 +89,11 @@ Home Lights:
   - light.nightstand
   - light.master_bedroom
   - light.loft_light
+
+Outdoor Lights:
+  - light.front_porch
+  - light.garage_left
+  - light.garage_right
 
 Weather Overview:
   - sun.sun
