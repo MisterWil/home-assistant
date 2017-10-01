@@ -2,21 +2,22 @@
   entities:
     group.sunset_lights:
       state: on
-      brightness: 255
+      brightness: 254
       transition: 3600
       
 - name: Indoor Lights Home
   entities:
     group.home_lights:
       state: on
-      brightness: 255
+      brightness: 254
       transition: 60
 
 - name: Theater On
   entities:
     light.tv_backlight:
       state: on
-      brightness: 255
+      brightness: 254
+      color_name: 'Gold'
 
 - name: Theater Off
   entities:
@@ -27,17 +28,4 @@
   entities:
     group.home_lights:
       state: on
-      brightness: 255
-
-- name: Outdoor Lights Sunset
-  entities:
-    group.sunset_lights:
-      state: on
-      brightness: 255
-      transition: 1800
-
-- name: Outdoor Lights Sunrise
-  entities:
-    group.sunset_lights:
-      state: off
-      transition: 1800
+      brightness: 254

@@ -1,9 +1,9 @@
-- alias: Turn off Outdoor Lights at Sunset
+- alias: Turn off Lights at Sunrise
 
   trigger:
     - platform: sun
       event: 'sunrise'
-      offset: '-00:30:00'
+      offset: '-01:00:00'
         
   condition:
     - condition: state
@@ -11,5 +11,6 @@
       state: 'on'
         
   action:
-    - service: scene.turn_on
-      entity_id: scene.outdoor_lights_sunrise
+    - delay: '00:{{ (range(1, 55)|random|int) }}:00'
+    - service: light.turn_off
+      entity_id: group.all_lights

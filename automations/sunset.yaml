@@ -33,9 +33,9 @@
 - alias: Turn on Outdoor Lights at Sunset
 
   trigger:
-    - platform: sun
-      event: 'sunset'
-      offset: '-00:30:00'
+    - platform: state
+      entity_id: sun.sun
+      to: 'below_horizon'
         
   condition:
     - condition: state
@@ -43,5 +43,4 @@
       state: 'on'
         
   action:
-    - service: scene.turn_on
-      entity_id: scene.outdoor_lights_sunset
+    - service: script.monthly_color_scene
