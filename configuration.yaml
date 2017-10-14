@@ -33,6 +33,14 @@ mqtt:
 blink:
   username: !secret blink_username
   password: !secret blink_password
+
+abode:
+  username: !secret abode_username
+  password: !secret abode_password
+
+skybell:
+  username: !secret skybell_username
+  password: !secret skybell_password
   
 panel_custom:
   - name: floorplan
