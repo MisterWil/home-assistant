@@ -224,3 +224,38 @@ Sara Tracking:
 All Tracking:
   - group.wil_tracking
   - group.sara_tracking
+
+Automations:
+ - automation.announce_package_delivery
+ - automation.arm_the_blink_system_when_the_alarm_is_in_away_mode
+ - automation.commute_delay__her_evening
+ - automation.commute_delay__her_morning
+ - automation.commute_delay__his_evening
+ - automation.commute_delay__his_morning
+ - automation.dark_house_little_extra_light
+ - automation.disarm_the_blink_system_when_the_alarm_is_disarmed
+ - automation.flip_mqtt_variable_switch_if_internet_goes_down
+ - automation.garage_door_left_open_close_and_notify_when_everyone_leaves_home
+ - automation.good_night_trigger
+ - automation.harmony_off
+ - automation.harmony_on
+ - automation.he_arrives_at_work
+ - automation.he_arrives_home
+ - automation.he_leaves_work_midday
+ - automation.he_leaves_work_to_probably_go_home
+ - automation.notify_all_once_per_day_in_the_morning_when_coldflu_is_at_least_medium
+ - automation.notify_all_once_per_day_in_the_morning_when_pollen_is_at_least_mediumhigh
+ - automation.notify_him_on_hass_startup
+ - automation.notify_him_on_internet_coming_back_up
+ - automation.she_arrives_at_work
+ - automation.she_arrives_home
+ - automation.she_leaves_work_midday
+ - automation.she_leaves_work_to_probably_go_home
+ - automation.turn_off_lights_and_tv_when_everyone_leaves_the_house
+ - automation.turn_off_lights_at_9pm_with_a_random_delay_of_up_to_2hr59m59s
+ - automation.turn_off_lights_at_sunrise
+ - automation.turn_on_lights_an_hour_before_sunset_with_a_random_delay_of_up_to_2hr59m59s
+ - automation.turn_on_lights_at_sunset_when_occupied
+ - automation.turn_on_lights_when_someone_gets_home_within_an_hour_of_sunset
+ - automation.turn_on_outdoor_lights_at_sunset
+ - automation.update_pictures_once_a_day_at_noon

@@ -52,6 +52,7 @@ Automation:
   icon: mdi:robot
   entities:
     - group.switches
+    - group.automations
     
 Sensors:
   view: yes
