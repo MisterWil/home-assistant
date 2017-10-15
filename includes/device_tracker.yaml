@@ -1,6 +1,6 @@
-- platform: owntracks
-  max_gps_accuracy: 200
-  track_new_devices: no
+- platform: owntracks_http
+  max_gps_accuracy: 100
+  track_new_devices: yes
   
 - platform: asuswrt
   host: 192.168.1.1
