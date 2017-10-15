@@ -213,11 +213,13 @@ Wil Tracking:
   - device_tracker.wils_iphone
   - device_tracker.wils_iphone_2
   - device_tracker.wilsiphone
+  - device_tracker.wil_otiphone
 
 Sara Tracking:
   - device_tracker.saraschrsiphone
   - device_tracker.sara_schraders_iphone_2
   - device_tracker.sara_schraders_iphone
+  - device_tracker.sara_otiphone
 
 All Tracking:
   - group.wil_tracking
