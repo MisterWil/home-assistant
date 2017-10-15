@@ -1,9 +1,9 @@
-- alias: Arm the Blink system when everyone leaves the house
+- alias: Arm the Blink system when the alarm is in away mode
 
   trigger:
     - platform: state
-      entity_id: group.all_devices
-      to: 'not_home'
+      entity_id: alarm_control_panel.abode_alarm
+      to: 'away'
       
   condition:
     - condition: state
@@ -27,12 +27,13 @@
       data:
         device_armed: 'True'
         
-- alias: Disarm the Blink system when someone gets home
+- alias: Disarm the Blink system when the alarm is disarmed
 
   trigger:
     - platform: state
-      entity_id: group.all_devices
-      to: 'home'
+      entity_id: alarm_control_panel.abode_alarm
+      to: 'disarmed'
+      from: 'away'
       
   condition:
     - condition: state

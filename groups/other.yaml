@@ -1,6 +1,6 @@
 Family:
-  - !secret his_device_tracker
-  - !secret her_device_tracker
+  - group.wil_tracking
+  - group.sara_tracking
   - sensor.neighborhood_incidents
   
 Theater:
@@ -208,3 +208,17 @@ Living Room Plant:
   - sensor.mi_flora_light_intensity
   - sensor.mi_flora_moisture
   - sensor.mi_flora_temperature
+
+Wil Tracking:
+  - device_tracker.wils_iphone
+  - device_tracker.wils_iphone_2
+  - device_tracker.wilsiphone
+
+Sara Tracking:
+  - device_tracker.saraschrsiphone
+  - device_tracker.sara_schraders_iphone_2
+  - device_tracker.sara_schraders_iphone
+
+All Tracking:
+  - group.wil_tracking
+  - group.sara_tracking
