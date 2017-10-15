@@ -1,16 +1,3 @@
-- name: Outdoor Lights Sunset
-  entities:
-    group.outdoor_lights:
-      state: on
-      brightness: 254
-      #color_name "Relax"
-      rgb_color: [255, 219, 146]
-
-- name: Outdoor Lights Sunrise
-  entities:
-    group.outdoor_lights:
-      state: off
-
 - name: outdoor_full_brightness
   entities:
      group.outdoor_lights:
@@ -140,17 +127,17 @@
 - name: month_thanksgiving_colors
   entities:
     light.front_porch:
-          state: 'on'
-          brightness: 254
-          rgb_color: [241, 185, 48]
-      light.garage_left:
-          state: 'on'
-          brightness: 254
-          color_name: 'orange'
-      light.garage_right:
-          state: 'on'
-          brightness: 254
-          rgb_color: [181, 71, 48]
+        state: 'on'
+        brightness: 254
+        rgb_color: [241, 185, 48]
+    light.garage_left:
+        state: 'on'
+        brightness: 254
+        color_name: 'orange'
+    light.garage_right:
+        state: 'on'
+        brightness: 254
+        rgb_color: [181, 71, 48]
 
 - name: month_hanukkah_colors
   entities:
