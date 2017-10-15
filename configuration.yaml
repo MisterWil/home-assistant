@@ -41,6 +41,10 @@ abode:
 skybell:
   username: !secret skybell_username
   password: !secret skybell_password
+
+usps:
+  username: !secret usps_username
+  password: !secret usps_password
   
 panel_custom:
   - name: floorplan
