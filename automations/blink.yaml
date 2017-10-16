@@ -3,7 +3,7 @@
   trigger:
     - platform: state
       entity_id: alarm_control_panel.abode_alarm
-      to: 'away'
+      to: 'armed_away'
       
   condition:
     - condition: state
@@ -33,7 +33,7 @@
     - platform: state
       entity_id: alarm_control_panel.abode_alarm
       to: 'disarmed'
-      from: 'away'
+      from: 'armed_away'
       
   condition:
     - condition: state
