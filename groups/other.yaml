@@ -259,3 +259,10 @@ Automations:
  - automation.turn_on_lights_when_someone_gets_home_within_an_hour_of_sunset
  - automation.turn_on_outdoor_lights_at_sunset
  - automation.update_pictures_once_a_day_at_noon
+
+ skybell:
+ - binary_sensor.skybell_front_door_button
+ - binary_sensor.skybell_front_door_motion
+ - sensor.skybell_front_door_chime_level
+ - switch.skybell_front_door_do_not_disturb
+ - switch.skybell_front_door_motion_sensor

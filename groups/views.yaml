@@ -41,7 +41,9 @@ Exterior:
   view: yes
   icon: mdi:tree
   entities:
+    - camera.front_door
     - camera.backyard
+    - group.skybell
     - group.weather_overview
     - group.weather_wind_rain
     - group.weather_report
