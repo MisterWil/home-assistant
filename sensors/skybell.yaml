@@ -1,0 +1,3 @@
+- platform: skybell
+  monitored_conditions:
+    - chime_level

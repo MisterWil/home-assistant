@@ -71,6 +71,7 @@ http:
 
 automation: !include_dir_merge_list automations
 binary_sensor: !include_dir_merge_list binary_sensors
+camera: !include_dir_merge_list cameras
 cover: !include_dir_merge_list covers
 device_tracker: !include includes/device_tracker.yaml
 group: !include_dir_merge_named groups
