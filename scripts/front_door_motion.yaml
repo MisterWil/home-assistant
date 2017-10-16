@@ -1,0 +1,9 @@
+front_door_motion:
+  sequence:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - service: scene.turn_on
+      entity_id: scene.outdoor_full_brightness
+    - delay: '00:{{ (range(5, 20)|random|int) }}:00'
+    - service: script.monthly_color_scene

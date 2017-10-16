@@ -1,0 +1,8 @@
+- alias: 'Front Door Motion'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.skybell_front_door_motion
+      to: 'on'
+
+  action:
+    - service: script.front_door_motion
