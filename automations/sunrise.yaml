@@ -1,9 +1,42 @@
-- alias: Turn off Lights at Sunrise
+- alias: Turn off any indoor lights three hours before sunrise if there is no motion indoors
 
   trigger:
     - platform: sun
       event: 'sunrise'
-      offset: '-02:00:00'
+      offset: '-03:00:00'
+        
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+    
+    - condition: state
+      entity_id: binary_sensor.loft_occupancy
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.bedroom_occupancy
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.upstairs_occupancy
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.downstairs_occupancy
+      state: 'off'
+        
+  action:
+    - delay: '00:{{ (range(1, 55)|random|int) }}:00'
+    - service: light.turn_off
+      entity_id: group.indoor_lights
+
+- alias: Turn off outdoor lights randomly an hour before sunrise
+
+  trigger:
+    - platform: sun
+      event: 'sunrise'
+      offset: '-01:00:00'
         
   condition:
     - condition: state
@@ -13,4 +46,4 @@
   action:
     - delay: '00:{{ (range(1, 55)|random|int) }}:00'
     - service: light.turn_off
-      entity_id: group.all_lights
+      entity_id: group.outdoor_lights
