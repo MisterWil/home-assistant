@@ -17,7 +17,7 @@
     light.tv_backlight:
       state: on
       brightness: 254
-      color_name: 'Gold'
+      color_name: 'White'
 
 - name: Theater Off
   entities:

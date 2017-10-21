@@ -59,6 +59,14 @@ Harmony:
   - switch.ps4
   - switch.nintendo_switch
 
+Indoor Lights:
+  - light.living_room
+  - light.tv_backlight
+  - light.loft_light
+  - light.guest_room_light
+  - light.master_bedroom
+  - light.nightstand
+
 All Lights:
   - light.living_room
   - light.tv_backlight
@@ -267,3 +275,4 @@ Skybell:
  - sensor.skybell_front_door_chime_level
  - switch.skybell_front_door_do_not_disturb
  - switch.skybell_front_door_motion_sensor
+ - light.front_door

@@ -6,7 +6,7 @@
 
   trigger:
     - platform: state
-      entity_id: group.all_tracked
+      entity_id: group.all_devices
       to: 'home'
       
   condition:

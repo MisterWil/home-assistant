@@ -2,7 +2,7 @@
 
   trigger:
     - platform: state
-      entity_id: group.all_tracking
+      entity_id: group.all_devices
       to: 'not_home'
       
   condition:
@@ -24,7 +24,7 @@
       
   action:
     - service: light.turn_off
-      entity_id: group.all_lights
+      entity_id: group.indoor_lights
       
     - service: remote.turn_off
       entity_id: remote.living_room

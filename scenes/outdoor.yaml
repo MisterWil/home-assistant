@@ -4,6 +4,10 @@
             state: 'on'
             color_name: 'white'
             brightness: 254
+        light.front_door:
+            state: 'on'
+            color_name: 'white'
+            brightness: 254
 
 - name: month_standard_colors
   entities:
@@ -11,6 +15,10 @@
             state: 'on'
             brightness: 254
             rgb_color: [255, 219, 146]
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            rgb_color: ['{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}']
 
 - name: month_RWB_colors
   entities:
@@ -28,10 +36,18 @@
             state: 'on'
             brightness: 254
             color_name: 'blue'
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: 'blue'
 
 - name: month_valentine_colors
   entities:
         group.outdoor_lights:
+            state: 'on'
+            brightness: 254
+            color_name: 'Crimson'
+        light.front_door:
             state: 'on'
             brightness: 254
             color_name: 'Crimson'
@@ -50,6 +66,10 @@
             state: 'on'
             brightness: 254
             color_name: 'Gold'
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: 'Green'
 
 - name: month_st_patty_colors
   entities:
@@ -58,6 +78,10 @@
             brightness: 254
             #color_name: 'Dark Spring Green'
             rgb_color: [23,114,69]
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: [23,114,69]
 
 - name: month_easter_colors
   entities:
@@ -72,6 +96,10 @@
             #color_name: 'Bubble Gum'
             rgb_color: [255,193,204]
         light.garage_right:
+            state: 'on'
+            brightness: 254
+            color_name: 'Green'
+        light.front_door:
             state: 'on'
             brightness: 254
             color_name: 'Green'
@@ -93,6 +121,10 @@
             brightness: 254
             # color_name: 'Red'
             rgb_color: [204,0,0]
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: [204,0,0]
 
 - name: month_fathers_day_colors
   entities:
@@ -108,6 +140,10 @@
             state: 'on'
             brightness: 254
             color_name: 'orange'
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: 'blue'
 
 - name: month_halloween_colors
   entities:
@@ -120,6 +156,10 @@
             brightness: 254
             color_name: 'orange'
         light.garage_right:
+            state: 'on'
+            brightness: 254
+            color_name: 'orange'
+        light.front_door:
             state: 'on'
             brightness: 254
             color_name: 'orange'
@@ -138,6 +178,10 @@
             state: 'on'
             brightness: 254
             rgb_color: [181, 71, 48]
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: 'orange'
 
 - name: month_hanukkah_colors
   entities:
@@ -153,6 +197,10 @@
             state: 'on'
             brightness: 254
             color_name: 'white'
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: 'blue'
 
 - name: month_christmas_colors
   entities:
@@ -168,6 +216,10 @@
             state: 'on'
             brightness: 254
             color_name: 'green'
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: 'red'
 
 - name: month_new_years_day_colors
   entities:
@@ -183,3 +235,7 @@
             state: 'on'
             brightness: 254
             color_name: 'violet'
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: 'yellow'
