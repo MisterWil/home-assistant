@@ -1,0 +1,39 @@
+# Sometimes I turn this off and forget to turn it back on
+- alias: Skybell - Set motion detection on at sunset
+
+  trigger:
+    - platform: sun
+      event: 'sunset'
+      
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.skybell_front_door_motion_sensor
+      state: 'off'
+      
+  action:
+    - service: switch.turn_on
+      entity_id: switch.skybell_front_door_motion_sensor
+
+- alias: Skybell - Set motion detection on when the alarm arms
+
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.abode_alarm
+      from: 'disarmed'
+      
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.skybell_front_door_motion_sensor
+      state: 'off'
+      
+  action:
+    - service: switch.turn_on
+      entity_id: switch.skybell_front_door_motion_sensor
