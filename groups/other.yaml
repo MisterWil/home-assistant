@@ -241,7 +241,7 @@ Skybell:
  - switch.skybell_front_door_motion_sensor
  - light.front_door
 
- Abode:
+Abode:
   - alarm_control_panel.abode_alarm
   - binary_sensor.front_door
   - lock.front_door_deadbolt
