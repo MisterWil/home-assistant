@@ -53,8 +53,8 @@
       
   action:
   - service: blink.arm_camera
-      data_template:
-        friendly_name: "{{ states.camera.backyard.attributes.friendly_name }}"
+    data_template:
+      friendly_name: "{{ states.camera.backyard.attributes.friendly_name }}"
         
 - alias: Blink - When the alarm is set to standby disarm all blink cameras
 
