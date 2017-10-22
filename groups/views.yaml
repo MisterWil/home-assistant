@@ -6,6 +6,7 @@ default_view:
     - group.commute
     - group.hue_lights
     - group.house_overview
+    - group.abode
     
 Living Room:
   view: yes

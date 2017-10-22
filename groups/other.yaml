@@ -240,3 +240,12 @@ Skybell:
  - switch.skybell_front_door_do_not_disturb
  - switch.skybell_front_door_motion_sensor
  - light.front_door
+
+ Abode:
+  - alarm_control_panel.abode_alarm
+  - binary_sensor.front_door
+  - lock.front_door_deadbolt
+  - binary_sensor.back_door
+  - lock.back_door_deadbolt
+  - binary_sensor.garage_entry_door
+  - lock.garage_door_deadbolt
