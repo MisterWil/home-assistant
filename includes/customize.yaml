@@ -17,3 +17,7 @@ sensor.deliveries_today:
   
 sensor.packages_in_transit:
   icon: mdi:truck-delivery
+
+group.all_automations:
+  hidden: false
+  friendly_name: 'Automations'
