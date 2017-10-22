@@ -23,6 +23,22 @@
       state: 'off'
       
   action:
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.backyard.attributes.friendly_name }}"
+        device_armed: 'True'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.loft.attributes.friendly_name }}"
+        device_armed: 'True'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.master_bedroom.attributes.friendly_name }}"
+        device_armed: 'True'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.downstairs.attributes.friendly_name }}"
+        device_armed: 'True'
     - service: blink.arm_system
       data:
         device_armed: 'True'
@@ -52,9 +68,25 @@
       state: 'off'
       
   action:
-  - service: blink.arm_camera
-    data_template:
-      friendly_name: "{{ states.camera.backyard.attributes.friendly_name }}"
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.backyard.attributes.friendly_name }}"
+        device_armed: 'True'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.loft.attributes.friendly_name }}"
+        device_armed: 'False'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.master_bedroom.attributes.friendly_name }}"
+        device_armed: 'False'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.downstairs.attributes.friendly_name }}"
+        device_armed: 'False'
+    - service: blink.arm_system
+      data:
+        device_armed: 'True'
         
 - alias: Blink - When the alarm is set to standby disarm all blink cameras
 
@@ -85,6 +117,22 @@
     - service: blink.arm_system
       data:
         device_armed: 'False'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.backyard.attributes.friendly_name }}"
+        device_armed: 'True'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.loft.attributes.friendly_name }}"
+        device_armed: 'True'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.master_bedroom.attributes.friendly_name }}"
+        device_armed: 'True'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.downstairs.attributes.friendly_name }}"
+        device_armed: 'True'
         
 - alias: Blink - Update Blink pictures every day at noon
 
