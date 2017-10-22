@@ -1,4 +1,4 @@
-- alias: Garage door left open, close and notify when everyone leaves home
+- alias: Presence - Close garage door if it is left open
 
   trigger:
     - platform: state

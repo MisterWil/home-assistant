@@ -1,4 +1,4 @@
-- alias: Flip mqtt variable switch if internet goes down
+- alias: Trigger - Flip input boolean if internet goes down for 5 minutes
   trigger:
     - platform: state
       entity_id: sensor.internet
@@ -8,10 +8,10 @@
         minutes: 5
     
   action:
-    - service: switch.turn_on
-      entity_id: switch.internet_down
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.internet
 
-- alias: Notify him on internet coming back up
+- alias: Notify & Trigger - Internet has come back online
   trigger:
     - platform: state
       entity_id: sensor.internet
@@ -20,8 +20,8 @@
       
   condition:
     - condition: state
-      entity_id: switch.internet_down
-      state: 'on'
+      entity_id: input_boolean.internet
+      state: 'off'
     
   action:
     - service: notify.him
@@ -29,5 +29,5 @@
         message: >
           The internet was down and is now back online!
           
-    - service: switch.turn_off
-      entity_id: switch.internet_down
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.internet

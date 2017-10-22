@@ -1,4 +1,4 @@
-- alias: 'Good Night Trigger'
+- alias: Trigger - Turn off all the lights if Good Night is triggered
   trigger:
     - platform: state
       entity_id: input_boolean.good_night

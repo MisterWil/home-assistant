@@ -2,7 +2,7 @@
 #  is 'home' if ANY tracked device is home, and 'not_home'
 #  if EVERY tracked device is not home.
 
-- alias: Turn on lights when someone gets home within an hour of sunset
+- alias: Presence - Turn the lights on if someone gets home
 
   trigger:
     - platform: state

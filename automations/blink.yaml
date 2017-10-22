@@ -1,4 +1,4 @@
-- alias: Arm the Blink system when the alarm is in away mode
+- alias: Blink - When the alarm is set to away arm all Blink cameras
 
   trigger:
     - platform: state
@@ -26,8 +26,37 @@
     - service: blink.arm_system
       data:
         device_armed: 'True'
+
+- alias: Blink - When the alarm is set to home arm all outdoor Blink cameras
+
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.abode_alarm
+      to: 'armed_away'
+      
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.presence
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.vacation
+      state: 'off'
+      
+    - condition: state
+      entity_id: switch.guests
+      state: 'off'
+      
+  action:
+  - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.backyard.attributes.friendly_name }}"
         
-- alias: Disarm the Blink system when the alarm is disarmed
+- alias: Blink - When the alarm is set to standby disarm all blink cameras
 
   trigger:
     - platform: state
@@ -57,7 +86,7 @@
       data:
         device_armed: 'False'
         
-- alias: Update pictures once a day at noon
+- alias: Blink - Update Blink pictures every day at noon
 
   trigger:
     - platform: time
@@ -99,4 +128,4 @@
           
     - service: blink.snap_picture
       data_template:
-        friendly_name: "{{ states.camera.closet.attributes.friendly_name }}"
+        friendly_name: "{{ states.camera.molly_cam.attributes.friendly_name }}"

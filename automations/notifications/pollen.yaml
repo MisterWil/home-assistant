@@ -1,4 +1,4 @@
-- alias: Notify all once per day in the morning when pollen is at least medium-high
+- alias: Notification - Damn pollen
   trigger:
     - platform: time
       at: '07:00:00'
@@ -6,7 +6,7 @@
   condition:
     - condition: numeric_state
       entity_id: sensor.pollen
-      above: 7.3
+      above: 4.9
     
   action:
     - service: notify.all
@@ -25,7 +25,7 @@
           high
           {%- endif %}
            
-- alias: Notify all once per day in the morning when cold/flu is at least medium
+- alias: Notification - Damn cold/flu viruses
   trigger:
     - platform: time
       at: '07:00:00'

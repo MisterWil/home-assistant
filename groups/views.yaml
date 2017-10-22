@@ -12,6 +12,7 @@ Living Room:
   icon: mdi:sofa
   entities:
     - camera.downstairs
+    - camera.molly_cam
     - group.theater
     - group.downstairs_climate
     - light.living_room
@@ -31,7 +32,6 @@ Bedrooms:
   icon: mdi:hotel
   entities:
     - camera.master_bedroom
-    - camera.closet
     - group.bedroom_climate
     - light.master_bedroom
     - light.nightstand
@@ -54,7 +54,7 @@ Automation:
   icon: mdi:robot
   entities:
     - group.switches
-    - group.automations
+    - group.all_automations
     
 Sensors:
   view: yes

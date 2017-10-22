@@ -1,4 +1,4 @@
-- alias: Turn on lights an hour before sunset with a random delay of up to 2hr59m59s
+- alias: Vacation & Lights - Turn on lights randomly around sunset
 
   trigger:
     - platform: sun

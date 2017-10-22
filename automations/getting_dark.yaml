@@ -1,4 +1,4 @@
-- alias: 'Dark House Little extra light'
+- alias: Lights - Turn some lights on if it gets dark out
   trigger:
     - platform: numeric_state
       entity_id: sun.sun

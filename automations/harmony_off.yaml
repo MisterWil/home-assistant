@@ -1,4 +1,4 @@
-- alias: Harmony Off
+- alias: Lights - Turn the TV backlight off when the theater is turned off
 
   trigger:
     - platform: state

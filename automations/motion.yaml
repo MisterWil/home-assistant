@@ -1,4 +1,4 @@
-- alias: 'Front Door Motion'
+- alias: Lights - When the front door detects motion turn all lights to white
   trigger:
     - platform: state
       entity_id: binary_sensor.skybell_front_door_motion

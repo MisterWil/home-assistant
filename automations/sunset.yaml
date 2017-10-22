@@ -2,7 +2,7 @@
 #  is 'home' if ANY tracked device is home, and 'not_home'
 #  if EVERY tracked device is not home.
 
-- alias: Turn on Lights at Sunset when Occupied
+- alias: Presence & Lights - Turn on indoor lights an hour before sunset if somebody is home
 
   trigger:
     - platform: sun
@@ -30,7 +30,7 @@
     - service: scene.turn_on
       entity_id: scene.indoor_lights_sunset
 
-- alias: Turn on Outdoor Lights at Sunset
+- alias: Lights - Turn on outdoor lights at sunset
 
   trigger:
     - platform: state

@@ -1,4 +1,4 @@
-- alias: Turn off lights and tv when everyone leaves the house
+- alias: Presence - When everyone leaves turn everything off
 
   trigger:
     - platform: state

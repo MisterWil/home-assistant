@@ -1,4 +1,4 @@
-- alias: She arrives home
+- alias: Notification - Wife arrives home
   trigger:
     - platform: state
       entity_id: !secret her_device_tracker
@@ -15,8 +15,26 @@
       data:
         message: >
           Your wife has arrived home!
+
+- alias: Notification - Wife leaves home
+  trigger:
+    - platform: state
+      entity_id: !secret her_device_tracker
+      from: 'home'
+      to: 'not_home'
+      
+  condition:
+    - condition: state
+      entity_id: switch.tracking_alerts
+      state: 'on'
+      
+  action:
+    - service: notify.him
+      data:
+        message: >
+          Your wife has left home!
         
-- alias: She arrives at work
+- alias: Notification - Wife arrives at work
   trigger:
     - platform: state
       entity_id: !secret her_device_tracker
@@ -33,36 +51,8 @@
       data:
         message: >
           Your wife has arrived at work safe and sound!
-        
-- alias: She leaves work midday
-  trigger:
-    - platform: state
-      entity_id: !secret her_device_tracker
-      from: !secret her_work_name
-      to: 'not_home'
-      
-  condition:
-    - condition: state
-      entity_id: switch.tracking_alerts
-      state: 'on'
-      
-    - condition: time
-      after: '08:00:00'
-      before: '14:00:00'
-      weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
-      
-  action:
-    - service: notify.him
-      data:
-        message: >
-          Your wife has left work!
           
-- alias: She leaves work to probably go home
+- alias: Notification - Wife leaves work to probably go home
   trigger:
     - platform: state
       entity_id: !secret her_device_tracker

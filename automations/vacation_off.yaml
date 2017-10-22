@@ -1,4 +1,4 @@
-- alias: Turn off lights at 9pm with a random delay of up to 2hr59m59s
+- alias: Vacation & Lights - Turn off lights randomly between 9pm and 12am
 
   trigger:
     - platform: time

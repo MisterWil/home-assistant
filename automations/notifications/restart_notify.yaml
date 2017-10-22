@@ -1,6 +1,4 @@
-# Issue exists preventing this from firing: https://github.com/home-assistant/home-assistant/issues/7058
-
-- alias: Notify him on HASS startup
+- alias: Notification - Home assistant start
   trigger:
     - platform: homeassistant
       event: start
