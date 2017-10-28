@@ -1,5 +1,6 @@
 binary_sensor.blink_armed_status:
   friendly_name: Blink
+  homebridge_visible: true
   
 sensor.pollen:
   friendly_name: Pollen
@@ -21,3 +22,27 @@ sensor.packages_in_transit:
 group.all_automations:
   hidden: false
   friendly_name: 'Automations'
+
+alarm_control_panel.abode_alarm:
+  homebridge_visible: true
+  
+climate.downstairs:
+  homebridge_visible: true
+  
+climate.upstairs:
+  homebridge_visible: true
+  
+cover.garage_door:
+  homebridge_visible: true
+  
+lock.back_door_deadbolt:
+  homebridge_visible: true
+  
+lock.front_door_deadbolt:
+  homebridge_visible: true
+  
+lock.garage_door_deadbolt:
+  homebridge_visible: true
+  
+switch.skybell_front_door_motion_sensor:
+  homebridge_visible: true
