@@ -34,6 +34,7 @@ climate.upstairs:
   
 cover.garage_door:
   homebridge_visible: true
+  homebridge_cover_type: garage_door
   
 lock.back_door_deadbolt:
   homebridge_visible: true
