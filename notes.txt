@@ -368,6 +368,10 @@
 				]
 			}
 
+	- Open homebridge port
+		sudo ufw allow 51826
+		sudo ufw status
+
 	- Reload systemctl, enable and start homebridge
 		sudo systemctl daemon-reload
 		sudo systemctl enable homebridge
