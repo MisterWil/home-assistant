@@ -47,3 +47,6 @@ lock.garage_door_deadbolt:
   
 switch.skybell_front_door_motion_sensor:
   homebridge_visible: true
+
+switch.abode_alarm_home:
+  emulated_hue_hidden: false
