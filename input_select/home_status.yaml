@@ -1,0 +1,19 @@
+wil_status_dropdown:
+  name: Wil
+  options:
+    - Home
+    - Just Arrived
+    - Just Left
+    - Away
+    - Extended Away
+  initial: Home
+
+sara_status_dropdown:
+  name: Sara
+  options:
+    - Home
+    - Just Arrived
+    - Just Left
+    - Away
+    - Extended Away
+  initial: Home

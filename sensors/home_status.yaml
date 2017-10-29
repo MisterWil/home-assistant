@@ -1,0 +1,10 @@
+- platform: template
+  sensors:
+    wil_status:
+      value_template: '{{ states.input_select.wil_status_dropdown.state }}'
+      friendly_name: 'Wil'
+      entity_id: input_select.wil_status_dropdown
+    sara_status:
+      value_template: '{{ states.input_select.sara_status_dropdown.state }}'
+      friendly_name: 'Sara'
+      entity_id: input_select.sara_status_dropdown

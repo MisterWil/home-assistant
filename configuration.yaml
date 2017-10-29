@@ -73,6 +73,7 @@ device_tracker: !include includes/device_tracker.yaml
 group: !include_dir_merge_named groups
 history: !include includes/history.yaml
 input_boolean: !include_dir_merge_named input_boolean
+input_select: !include_dir_merge_named input_select
 light: !include_dir_merge_list lights
 logger: !include includes/logger.yaml
 logbook: !include includes/logbook.yaml
