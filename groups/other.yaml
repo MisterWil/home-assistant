@@ -1,5 +1,6 @@
 Family:
-  - group.all_home
+  - group.wil_home
+  - group.sara_home
   - sensor.neighborhood_incidents
   
 Theater:
@@ -222,7 +223,7 @@ Wil Home:
 
 Sara Home:
   - device_tracker.saras_iphone_router
-  - device_tracker.sara_iphone_bt
+  - device_tracker.saras_iphone_bt
 
 All Home:
   - group.wil_home
