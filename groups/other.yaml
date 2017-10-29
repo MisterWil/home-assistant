@@ -218,10 +218,8 @@ Living Room Plant:
   - sensor.mi_flora_temperature
 
 Home Status:
-  name: Home Status
-    entities:
-      - sensor.wil_status
-      - sensor.sara_status
+  - sensor.wil_status
+  - sensor.sara_status
 
 Wil Home:
   - device_tracker.wils_iphone_router
