@@ -6,7 +6,7 @@
 
   trigger:
     - platform: state
-      entity_id: group.all_devices
+      entity_id: group.all_home
       to: 'home'
       
   condition:

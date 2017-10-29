@@ -48,7 +48,7 @@
         state: 'off'
         
       - condition: state
-        entity_id: group.all_devices
+        entity_id: group.all_home
         state: 'home'
         
   action:

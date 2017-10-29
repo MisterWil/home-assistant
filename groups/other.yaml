@@ -1,6 +1,5 @@
 Family:
-  - group.wil_tracking
-  - group.sara_tracking
+  - group.all_home
   - sensor.neighborhood_incidents
   
 Theater:
@@ -217,15 +216,15 @@ Living Room Plant:
   - sensor.mi_flora_moisture
   - sensor.mi_flora_temperature
 
-Wil iPhone:
+Wil Home:
   - device_tracker.wils_iphone_router
   - device_tracker.wils_iphone_bt
 
-Sara Tracking:
+Sara Home:
   - device_tracker.saras_iphone_router
   - device_tracker.sara_iphone_bt
 
-All Tracking:
+All Home:
   - group.wil_tracking
   - group.sara_tracking
 
