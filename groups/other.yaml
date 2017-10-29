@@ -225,8 +225,8 @@ Sara Home:
   - device_tracker.sara_iphone_bt
 
 All Home:
-  - group.wil_tracking
-  - group.sara_tracking
+  - group.wil_home
+  - group.sara_home
 
 Skybell:
  - binary_sensor.skybell_front_door_button
