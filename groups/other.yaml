@@ -217,17 +217,13 @@ Living Room Plant:
   - sensor.mi_flora_moisture
   - sensor.mi_flora_temperature
 
-Wil Tracking:
-  - device_tracker.wils_iphone
-  - device_tracker.wils_iphone_2
-  - device_tracker.wilsiphone
-  - device_tracker.wil_otiphone
+Wil iPhone:
+  - device_tracker.wils_iphone_router
+  - device_tracker.wils_iphone_bt
 
 Sara Tracking:
-  - device_tracker.saraschrsiphone
-  - device_tracker.sara_schraders_iphone_2
-  - device_tracker.sara_schraders_iphone
-  - device_tracker.sara_otiphone
+  - device_tracker.saras_iphone_router
+  - device_tracker.sara_iphone_bt
 
 All Tracking:
   - group.wil_tracking
