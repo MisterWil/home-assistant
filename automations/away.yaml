@@ -1,9 +1,10 @@
 - alias: Presence - When everyone has gone away turn everything off
 
   trigger:
-     - platform: state
+    - platform: state
       entity_id: input_select.wil_status_dropdown
       to: 'Away'
+
     - platform: state
       entity_id: input_select.sara_status_dropdown
       to: 'Away'
