@@ -1,7 +1,6 @@
 Family:
-  - group.wil_home
-  - group.sara_home
-  - sensor.neighborhood_incidents
+  - sensor.wil_status
+  - sensor.sara_status
   
 Theater:
   control: hidden
@@ -216,10 +215,6 @@ Living Room Plant:
   - sensor.mi_flora_light_intensity
   - sensor.mi_flora_moisture
   - sensor.mi_flora_temperature
-
-Home Status:
-  - sensor.wil_status
-  - sensor.sara_status
 
 Wil Home:
   - device_tracker.wils_iphone_router

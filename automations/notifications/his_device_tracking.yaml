@@ -1,9 +1,9 @@
 - alias: Notification - Husband arrives home
   trigger:
     - platform: state
-      entity_id: !secret his_device_tracker
-      from: 'not_home'
-      to: 'home'
+      entity_id: input_select.wil_status_dropdown
+      from: 'Away'
+      to: 'Just Arrived'
       
   condition:
     - condition: state
@@ -19,9 +19,8 @@
 - alias: Notification - Husband leaves home
   trigger:
     - platform: state
-      entity_id: !secret his_device_tracker
-      from: 'home'
-      to: 'not_home'
+      entity_id: input_select.wil_status_dropdown
+      to: 'Away'
       
   condition:
     - condition: state

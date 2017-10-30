@@ -1,9 +1,12 @@
-- alias: Presence - Close garage door if it is left open
+- alias: Presence - Close garage door if everyone gone and it is left open
 
   trigger:
     - platform: state
-      entity_id: group.all_home
-      to: 'not_home'
+      entity_id: input_select.wil_status_dropdown
+      to: 'Away'
+    - platform: state
+      entity_id: input_select.sara_status_dropdown
+      to: 'Away'
       
   condition:
     - condition: state
@@ -21,12 +24,20 @@
     - condition: state
       entity_id: cover.garage_door
       state: 'open'
+
+    - condition: state
+      entity_id: input_select.wil_status_dropdown
+      state: 'Away'
+
+    - condition: state
+      entity_id: input_select.sara_status_dropdown
+      state: 'Away'
       
   action:
+    - service: cover.close_cover
+      entity_id: cover.garage_door
+      
     - service: notify.all
       data:
         message: >
           The garage door was left open but it has now been closed.
-      
-    - service: cover.close_cover
-      entity_id: cover.garage_door

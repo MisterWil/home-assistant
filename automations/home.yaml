@@ -1,13 +1,18 @@
-#  Note that `group.all_devices` is special: Its state
-#  is 'home' if ANY tracked device is home, and 'not_home'
-#  if EVERY tracked device is not home.
+# Essentially: If either person went from away to just arrived
+# and the other person is not home turn on some lights
 
 - alias: Presence - Turn the lights on if someone gets home
 
   trigger:
     - platform: state
-      entity_id: group.all_home
-      to: 'home'
+      entity_id: input_select.wil_status_dropdown
+      from: 'Away'
+      to: 'Just Arrived'
+
+    - platform: state
+      entity_id: input_select.sara_status_dropdown
+      from: 'Away'
+      to: 'Just Arrived'
       
   condition:
     - condition: state
@@ -21,6 +26,9 @@
     - condition: sun
       after: sunset
       after_offset: '-00:59:00'
+
+    - condition: template
+      value_template: '{{ not (is_state('sensor.wil_status', 'Home') or is_state('sensor.sara_status', 'Home')) }}'
 
   action:
     - service: scene.turn_on

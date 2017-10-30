@@ -17,8 +17,8 @@
       entity_id: switch.his_alert_delays
       state: 'on'
     - condition: state
-      entity_id: !secret his_device_tracker
-      state: 'home'
+      entity_id: input_select.wil_status_dropdown
+      state: 'Home'
   action:
     service: notify.him
     data:

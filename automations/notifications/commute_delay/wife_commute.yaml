@@ -17,8 +17,8 @@
       entity_id: switch.her_alert_delays
       state: 'on'
     - condition: state
-      entity_id: !secret her_device_tracker
-      state: 'home'
+      entity_id: input_select.sara_status_dropdown
+      state: 'Home'
   action:
     service: notify.her
     data:

@@ -46,10 +46,16 @@
       - condition: state
         entity_id: switch.vacation
         state: 'off'
-        
-      - condition: state
-        entity_id: group.all_home
-        state: 'home'
+      
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: input_select.wil_status_dropdown
+            state: 'Home'
+
+          - condition: state
+            entity_id: input_select.sara_status_dropdown
+            state: 'Home'
         
   action:
     - service: light.turn_on

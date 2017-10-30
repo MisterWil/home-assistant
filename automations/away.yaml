@@ -1,9 +1,12 @@
-- alias: Presence - When everyone leaves turn everything off
+- alias: Presence - When everyone has gone away turn everything off
 
   trigger:
+     - platform: state
+      entity_id: input_select.wil_status_dropdown
+      to: 'Away'
     - platform: state
-      entity_id: group.all_home
-      to: 'not_home'
+      entity_id: input_select.sara_status_dropdown
+      to: 'Away'
       
   condition:
     - condition: state
@@ -21,6 +24,14 @@
     - condition: state
       entity_id: switch.guests
       state: 'off'
+
+    - condition: state
+      entity_id: input_select.wil_status_dropdown
+      state: 'Away'
+
+    - condition: state
+      entity_id: input_select.sara_status_dropdown
+      state: 'Away'
       
   action:
     - service: light.turn_off

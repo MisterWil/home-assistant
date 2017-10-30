@@ -1,7 +1,3 @@
-#  Note that `group.all_devices` is special: Its state
-#  is 'home' if ANY tracked device is home, and 'not_home'
-#  if EVERY tracked device is not home.
-
 - alias: Presence & Lights - Turn on indoor lights an hour before sunset if somebody is home
 
   trigger:
@@ -22,9 +18,15 @@
       entity_id: switch.vacation
       state: 'off'
         
-    - condition: state
-      entity_id: group.all_home
-      state: 'home'
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: input_select.wil_status_dropdown
+          state: 'Home'
+
+        - condition: state
+          entity_id: input_select.sara_status_dropdown
+          state: 'Home'
         
   action:
     - service: scene.turn_on
