@@ -28,7 +28,7 @@
       after_offset: '-00:59:00'
 
     - condition: template
-      value_template: '{{ not (is_state('sensor.wil_status', 'Home') or is_state('sensor.sara_status', 'Home')) }}'
+      value_template: "{{ not (is_state('sensor.wil_status', 'Home') or is_state('sensor.sara_status', 'Home')) }}""
 
   action:
     - service: scene.turn_on
