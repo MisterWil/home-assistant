@@ -25,12 +25,12 @@
       entity_id: input_select.wil_status_dropdown
       to: 'Just Arrived'
       for:
-        minutes: 10
+        minutes: 5
     - platform: state
       entity_id: input_select.sara_status_dropdown
       to: 'Just Arrived'
       for:
-        minutes: 10
+        minutes: 5
     - platform: state
       entity_id: input_select.wil_status_dropdown
       from: 'Just Left'
@@ -77,12 +77,12 @@
       entity_id: input_select.wil_status_dropdown
       to: 'Just Left'
       for:
-        minutes: 10
+        minutes: 5
     - platform: state
       entity_id: input_select.sara_status_dropdown
       to: 'Just Left'
       for:
-        minutes: 10
+        minutes: 5
   action:
     - service: input_select.select_option
       data_template:
