@@ -1,6 +1,8 @@
 Family:
   - sensor.wil_status
   - sensor.sara_status
+  - device_tracker.wils_iphone_x
+  - device_tracker.saras_iphone_x
   
 Theater:
   control: hidden
