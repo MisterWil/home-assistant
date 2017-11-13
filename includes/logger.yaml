@@ -1,4 +1,4 @@
-default: info
+default: warn
 logs:
   homeassistant.components.http: warn
   homeassistant.core: warn
