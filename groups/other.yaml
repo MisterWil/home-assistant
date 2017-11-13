@@ -62,42 +62,50 @@ Harmony:
 
 Indoor Lights:
   - light.living_room
-  - light.tv_backlight
+  - light.entertainment_center
+  - light.kitchen_cabinets
   - light.loft_light
   - light.guest_room_light
   - light.master_bedroom
   - light.nightstand
+  - light.hue_go
 
 All Lights:
   - light.living_room
-  - light.tv_backlight
+  - light.entertainment_center
+  - light.kitchen_cabinets
   - light.loft_light
   - light.guest_room_light
   - light.master_bedroom
   - light.nightstand
+  - light.hue_go
   - light.front_porch
   - light.garage_left
   - light.garage_right
 
 Hue lights:
   - light.living_room
-  - light.tv_backlight
+  - light.entertainment_center
+  - light.kitchen_cabinets
   - light.loft_light
   - light.guest_room_light
   - light.master_bedroom
   - light.nightstand
+  - light.hue_go
   - light.front_porch
   - light.garage_left
   - light.garage_right
 
 Sunset Lights:
   - light.living_room
+  - light.kitchen_cabinets
   - light.nightstand
   - light.master_bedroom
   - light.loft_light
 
 Home Lights:
   - light.living_room
+  - light.kitchen_cabinets
   - light.nightstand
   - light.master_bedroom
   - light.loft_light

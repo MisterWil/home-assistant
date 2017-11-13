@@ -17,8 +17,8 @@ Living Room:
     - group.theater
     - group.downstairs_climate
     - light.living_room
-    - light.tv_backlight
-    - group.living_room_plant
+    - light.entertainment_center
+    - light.kitchen_cabinets
 
 Loft:
   view: yes
@@ -36,6 +36,7 @@ Bedrooms:
     - group.bedroom_climate
     - light.master_bedroom
     - light.nightstand
+    - light.hue_go
     - light.guest_room_light
 
 Exterior:

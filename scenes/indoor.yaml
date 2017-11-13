@@ -14,14 +14,14 @@
 
 - name: Theater On
   entities:
-    light.tv_backlight:
+    light.entertainment_center:
       state: on
       brightness: 254
       color_name: 'White'
 
 - name: Theater Off
   entities:
-    light.tv_backlight:
+    light.entertainment_center:
       state: off
 
 - name: Vacation
