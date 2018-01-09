@@ -69,3 +69,4 @@ Sensors:
     - group.system_sensors
     - group.history
     - group.packages
+    - media_player.spotify

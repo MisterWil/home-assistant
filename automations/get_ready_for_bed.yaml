@@ -1,0 +1,32 @@
+- alias: Trigger - Turn off all downstairs things and dim the bedroom lights
+  trigger:
+    - platform: state
+      entity_id: input_boolean.get_ready_for_bed
+      to: 'on'
+      from: 'off'
+
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+      
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+
+  action:
+    # Turn off the boolean switch
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.get_ready_for_bed
+
+    # Turn downstairs things off
+    - service: light.turn_off
+      entity_id: group.downstairs_lights
+
+    - service: remote.turn_off
+      entity_id: remote.living_room
+
+    # Dim upstairs things to 40%
+    - service: light.turn_on
+      entity_id: group.upstairs_lights
+      brightness: 102

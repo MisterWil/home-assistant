@@ -70,6 +70,18 @@ Indoor Lights:
   - light.nightstand
   - light.hue_go
   - light.zooz_unknown_typeb112_id1f1c_level
+  - light.kitchen_lights
+
+Downstairs Lights:
+  - light.living_room
+  - light.entertainment_center
+  - light.kitchen_cabinets
+  - light.kitchen_lights
+
+Upstairs Lights:
+  - light.loft_light
+  - light.master_bedroom
+  - light.nightstand
 
 All Lights:
   - light.living_room

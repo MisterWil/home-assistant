@@ -15,14 +15,34 @@
       state: 'below_horizon'
 
   action:
+    # Turn off the boolean switch
     - service: input_boolean.turn_off
       entity_id: input_boolean.good_night
 
+    # Arm the alarm
     - service: alarm_control_panel.alarm_arm_home
       entity_id: alarm_control_panel.abode_alarm
-      
+    
+    # Turn things off
     - service: light.turn_off
       entity_id: group.indoor_lights
 
     - service: remote.turn_off
       entity_id: remote.living_room
+    
+    # Set the volume of the bedroom echo to 40% and play my sleeping playlist
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.spotify
+        source: 'Bedroom Echo'
+
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.spotify
+        volume_level: '0.40'
+
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.spotify
+        media_content_id: 'spotify:user:misterwil:playlist:7Iyu1IVXVINPJciIAU4vkv'
+        media_content_type: 'playlist'
