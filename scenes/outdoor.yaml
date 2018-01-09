@@ -18,7 +18,11 @@
         light.front_door:
             state: 'on'
             brightness: 254
-            rgb_color: ['{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}']
+            color_name: 'blue'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            rgb_color: [255, 219, 146]
 
 - name: month_RWB_colors
   entities:
@@ -40,6 +44,10 @@
             state: 'on'
             brightness: 254
             color_name: 'blue'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            rgb_color: [204, 0, 0]
 
 - name: month_valentine_colors
   entities:
@@ -51,6 +59,11 @@
             state: 'on'
             brightness: 254
             color_name: 'Crimson'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            color_name: 'Crimson'
+            rgb_color: [0,0,0]
 
 - name: month_marti_gras_colors
   entities:
@@ -70,6 +83,10 @@
             state: 'on'
             brightness: 254
             color_name: 'Green'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            color_name: 'purple'
 
 - name: month_st_patty_colors
   entities:
@@ -82,6 +99,10 @@
             state: 'on'
             brightness: 254
             color_name: [23,114,69]
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            rgb_color: [23, 114, 69]
 
 - name: month_easter_colors
   entities:
@@ -103,6 +124,10 @@
             state: 'on'
             brightness: 254
             color_name: 'Green'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            rgb_color: [244,187,255]
 
 - name: month_cinco_de_mayo_colors
   entities:
@@ -125,6 +150,10 @@
             state: 'on'
             brightness: 254
             color_name: [204,0,0]
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            rgb_color: [23,114,69]
 
 - name: month_fathers_day_colors
   entities:
@@ -141,6 +170,10 @@
             brightness: 254
             color_name: 'orange'
         light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: 'blue'
+        light.kitchen_cabinets:
             state: 'on'
             brightness: 254
             color_name: 'blue'
@@ -163,6 +196,10 @@
             state: 'on'
             brightness: 254
             color_name: 'orange'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            color_name: 'orange'
 
 - name: month_thanksgiving_colors
   entities:
@@ -182,6 +219,10 @@
             state: 'on'
             brightness: 254
             color_name: 'orange'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            rgb_color: [181, 71, 48]
 
 - name: month_hanukkah_colors
   entities:
@@ -201,6 +242,10 @@
             state: 'on'
             brightness: 254
             color_name: 'blue'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            color_name: 'white'
 
 - name: month_christmas_colors
   entities:
@@ -220,22 +265,97 @@
             state: 'on'
             brightness: 254
             color_name: 'red'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            color_name: 'red'
 
 - name: month_new_years_day_colors
   entities:
         light.front_porch:
             state: 'on'
             brightness: 254
-            color_name: 'blue'
+            effect: colorloop
         light.garage_left:
             state: 'on'
             brightness: 254
-            color_name: 'yellow'
+            effect: colorloop
         light.garage_right:
             state: 'on'
             brightness: 254
-            color_name: 'violet'
+            effect: colorloop
         light.front_door:
             state: 'on'
             brightness: 254
-            color_name: 'yellow'
+            color_name: 'purple'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            effect: colorloop
+
+- name: month_mlk_day_colors
+  entities:
+        light.front_porch:
+            state: 'on'
+            brightness: 254
+            color_name: 'red'
+        light.garage_left:
+            state: 'off'
+        light.garage_right:
+            state: 'on'
+            brightness: 254
+            color_name: 'green'
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: 'white'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            color_name: 'white'
+
+- name: month_superbowl_colors
+  entities:
+        light.front_porch:
+            state: 'on'
+            brightness: 254
+            color_name: 'red'
+        light.garage_left:
+            state: 'on'
+            brightness: 254
+            color_name: 'blue'
+        light.garage_right:
+            state: 'on'
+            brightness: 254
+            color_name: 'purple'
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: 'purple'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            color_name: 'purple'
+
+- name: month_earth_day_colors
+  entities:
+        light.front_porch:
+            state: 'on'
+            brightness: 254
+            color_name: 'green'
+        light.garage_left:
+            state: 'on'
+            brightness: 254
+            color_name: 'green'
+        light.garage_right:
+            state: 'on'
+            brightness: 254
+            color_name: 'green'
+        light.front_door:
+            state: 'on'
+            brightness: 254
+            color_name: 'blue'
+        light.kitchen_cabinets:
+            state: 'on'
+            brightness: 254
+            color_name: 'green'

@@ -10,51 +10,59 @@ monthly_color_scene:
           scene.month_
           {%- if now().strftime("%m%d")|int == 101 -%}
           new_years_day
+          {%- if now().strftime("%m%d")|int == 115 -%}
+          mlk_day
           {%- elif now().strftime("%m%d")|int == 212
-          or now().strftime("%m%d")|int == 220
-          or now().strftime("%m%d")|int == 520
-          or now().strftime("%m%d")|int == 529
+          or now().strftime("%m%d")|int == 219
+          or now().strftime("%m%d")|int == 519
+          or now().strftime("%m%d")|int == 528
           or now().strftime("%m%d")|int == 614
+          or now().strftime("%m%d")|int == 703
           or now().strftime("%m%d")|int == 704
-          or now().strftime("%m%d")|int == 904
+          or now().strftime("%m%d")|int == 705
+          or now().strftime("%m%d")|int == 903
           or now().strftime("%m%d")|int == 911
-          or now().strftime("%m%d")|int == 1009
+          or now().strftime("%m%d")|int == 1008
           or now().strftime("%m%d")|int == 1111
           -%}
           RWB
-          {%- elif now().strftime("%m%d")|int >= 210
-          and now().strftime("%m%d")|int <= 214-%}
+          {%- if now().strftime("%m%d")|int == 204 -%}
+          superbowl
+          {%- if now().strftime("%m%d")|int == 214 -%}
           valentine
-          {%- elif now().strftime("%m%d")|int == 228 -%}
+          {%- elif now().strftime("%m%d")|int == 213 -%}
           marti_gras
-          {%- elif now().strftime("%m%d")|int >= 314
-          and now().strftime("%m%d")|int <= 317-%}
+          {%- elif now().strftime("%m%d")|int >= 316
+          and now().strftime("%m%d")|int <= 317 -%}
           st_patty
-          {%- elif now().strftime("%m%d")|int >= 414
-          and now().strftime("%m%d")|int <= 416-%}
+          {%- elif now().strftime("%m%d")|int >= 330
+          and now().strftime("%m%d")|int <= 401 -%}
           easter
+          {%- elif now().strftime("%m%d")|int >= 420
+          and now().strftime("%m%d")|int <= 422 -%}
+          earth_day
           {%- elif now().strftime("%m%d")|int == 505 -%}
           cinco_de_mayo
-          {%- elif now().strftime("%m%d")|int == 514 -%}
+          {%- elif now().strftime("%m%d")|int == 513 -%}
           valentine
-          {%- elif now().strftime("%m%d")|int == 618 -%}
+          {%- elif now().strftime("%m%d")|int == 617 -%}
           fathers_day
           {%- elif now().strftime("%m%d")|int >= 1001
-          and now().strftime("%m%d")|int <= 1008-%}
+          and now().strftime("%m%d")|int <= 1007-%}
           halloween
-          {%- elif now().strftime("%m%d")|int >= 1010
+          {%- elif now().strftime("%m%d")|int >= 1009
           and now().strftime("%m%d")|int <= 1031-%}
           halloween
-          {%- elif now().strftime("%m%d")|int >= 1120
-          and now().strftime("%m%d")|int <= 1124-%}
+          {%- elif now().strftime("%m%d")|int >= 1119
+          and now().strftime("%m%d")|int <= 1122-%}
           thanksgiving
-          {%- elif now().strftime("%m%d")|int >= 1201
-          and now().strftime("%m%d")|int <= 1211-%}
+          {%- elif now().strftime("%m%d")|int >= 1123
+          and now().strftime("%m%d")|int <= 1201-%}
           christmas
-          {%- elif now().strftime("%m%d")|int >= 1212
-          and now().strftime("%m%d")|int <= 1220-%}
+          {%- elif now().strftime("%m%d")|int >= 1202
+          and now().strftime("%m%d")|int <= 1210-%}
           hanukkah
-          {%- elif now().strftime("%m%d")|int >= 1221
+          {%- elif now().strftime("%m%d")|int >= 1211
           and now().strftime("%m%d")|int <= 1230-%}
           christmas
           {%- elif now().strftime("%m%d")|int == 1231 -%}
@@ -64,29 +72,32 @@ monthly_color_scene:
           {%- endif -%}_colors
 
 
-# http://www.calendar-365.com/holidays/2017.html
+# http://www.calendar-365.com/holidays/2018.html
+# http://www.esbnyc.com/explore/tower-lights/calendar
 # 101 New_years_day (colorloop)
+# 115 MLK Day (Red, Black, Green)
+# 204 Superbowl LII (Red, Blue, Purple)
 # RWB 212 Lincoln's Birthday
+# 213 Mardi Gras (purple, green, gold )
 # 214 Valentine's Day (pink, red)
-# RWB 220 President's Day
-# 228 Mardi Gras (purple, green, gold )
-# 317 st Patty (green)
-# 414 Good Friday
-# 416 Easter
+# RWB 219 President's Day
+# 317 St Patty (green)
+# 401 Easter
 # 422 Earth Day
 # 505 Cinco de Mayo (green, white, red)
-# 514 Mother's Day (pink, red) - Same as Valentine
-# RWB 520 Armed Forces Day
-# RWB 529 Memorial Day
+# 513 Mother's Day (pink, red) - Same as Valentine
+# RWB 519 Armed Forces Day
+# RWB 528 Memorial Day
 # RWB 614 Flag Day
-# 618 Fathers day (Orange, Blue)
-# RWB 704 July 4th
-# RWB 904 Labor Day
+# 617 Fathers day (Orange, Blue)
+# RWB 703-705 July 4th
+# RWB 903 Labor Day
 # RWB 911 Patriots day
-# RWB 1009 columbus day
+# RWB 1008 columbus day
 # 1031 halloween
 # RWB 1111 veterans day
-# 1123 Thanksgiving - same as Halloween
-# 1212 Hanukkah start 8 days.
-# 1225 Chrismas
-# 1231 New years eve
+# 1122 Thanksgiving - same as Halloween
+# 1123 - 1201 Christmas
+# 1202 - 1210 Hanukkah start 8 days.
+# 1211-1230 Chrismas
+# 1231 New years eve (colorloop)
