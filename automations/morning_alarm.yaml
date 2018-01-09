@@ -1,0 +1,40 @@
+- alias: Alarm - Set alarm to standby in the morning
+  trigger:
+    - platform: state
+      entity_id: light.zooz_unknown_typeb112_id1f1c_level
+      to: 'on'
+
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.presence
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.guests
+      state: 'off'
+      
+    - condition: state
+      entity_id: alarm_control_panel.abode_alarm
+      state: 'armed_home'
+    
+    - condition: time
+      after: '05:30:00'
+      before: '18:00:00'
+
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: input_select.wil_status_dropdown
+          state: 'Home'
+
+        - condition: state
+          entity_id: input_select.sara_status_dropdown
+          state: 'Home'
+
+  action:
+    - service: alarm_control_panel.alarm_disarm
+      entity_id: alarm_control_panel.abode_alarm
