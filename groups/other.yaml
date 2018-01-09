@@ -69,7 +69,7 @@ Indoor Lights:
   - light.master_bedroom
   - light.nightstand
   - light.hue_go
-  - light.level
+  - light.zooz_unknown_typeb112_id1f1c_level
 
 All Lights:
   - light.living_room
@@ -83,7 +83,7 @@ All Lights:
   - light.front_porch
   - light.garage_left
   - light.garage_right
-  - light.level
+  - light.zooz_unknown_typeb112_id1f1c_level
 
 Hue lights:
   - light.living_room

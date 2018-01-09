@@ -57,5 +57,5 @@ sensor.wil_status:
 sensor.sara_status:
   entity_picture: /local/sara.jpg
 
-light.level:
+light.zooz_unknown_typeb112_id1f1c_level:
   friendly_name: Master Bath Lights
