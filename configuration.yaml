@@ -88,6 +88,7 @@ input_select: !include_dir_merge_named input_select
 light: !include_dir_merge_list lights
 logger: !include includes/logger.yaml
 logbook: !include includes/logbook.yaml
+media_player: !include includes/media_player.yaml
 notify: !include includes/notify.yaml
 recorder: !include includes/recorder.yaml
 remote: !include_dir_merge_list remotes
