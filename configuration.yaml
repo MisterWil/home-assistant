@@ -45,6 +45,13 @@ skybell:
 usps:
   username: !secret usps_username
   password: !secret usps_password
+
+hue:
+  bridges:
+    - host: !secret hue_host
+      allow_in_emulated_hue: false
+      allow_unreachable: true
+      allow_hue_groups: false
   
 panel_custom:
   - name: floorplan
