@@ -62,3 +62,4 @@ sensor.sara_status:
 
 light.zooz_unknown_typeb112_id1f1c_level:
   friendly_name: Master Bath Lights
+  emulated_hue_hidden: false
