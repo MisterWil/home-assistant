@@ -51,6 +51,9 @@ switch.skybell_front_door_motion_sensor:
 input_boolean.good_night:
   emulated_hue_hidden: false
 
+input_boolean.get_ready_for_bed:
+  emulated_hue_hidden: false
+
 sensor.wil_status:
   entity_picture: /local/wil.jpg
 

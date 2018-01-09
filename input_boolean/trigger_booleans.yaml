@@ -2,6 +2,10 @@ good_night:
   name: Good Night
   initial: off
 
+get_ready_for_bed:
+  name: Get Ready For Bed
+  initial: off
+
 internet:
   name: Internet
   initial: on
