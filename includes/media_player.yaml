@@ -1,7 +1,3 @@
-#- platform: owntracks_http
-#  max_gps_accuracy: 100
-#  track_new_devices: yes
-  
 - platform: spotify
   client_id: !secret spotify_clientid
   client_secret: !secret spotify_clientsecret
