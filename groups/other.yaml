@@ -84,6 +84,7 @@ All Lights:
   - light.garage_left
   - light.garage_right
   - light.zooz_unknown_typeb112_id1f1c_level
+  - light.kitchen_lights
 
 Hue lights:
   - light.living_room

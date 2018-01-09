@@ -4,7 +4,7 @@ default_view:
   entities:
     - group.family
     - group.commute
-    - group.hue_lights
+    - group.all_lights
     - group.house_overview
     - group.abode
     
