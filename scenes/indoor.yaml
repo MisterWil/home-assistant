@@ -29,3 +29,9 @@
     group.home_lights:
       state: on
       brightness: 254
+
+- name: Get Ready For Bed
+  entities:
+    group.upstairs_lights:
+      state: on
+      brightness: 102

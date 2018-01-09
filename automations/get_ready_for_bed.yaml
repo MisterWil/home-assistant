@@ -26,7 +26,6 @@
     - service: remote.turn_off
       entity_id: remote.living_room
 
-    # Dim upstairs things to 40%
-    - service: light.turn_on
-      entity_id: group.upstairs_lights
-      brightness: 102
+    # Turn on the upstairs bedtime scene
+    - service: scene.turn_on
+      entity_id: scene.get_ready_for_bed
