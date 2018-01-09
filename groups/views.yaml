@@ -38,6 +38,7 @@ Bedrooms:
     - light.nightstand
     - light.hue_go
     - light.guest_room_light
+    - light.level
 
 Exterior:
   view: yes

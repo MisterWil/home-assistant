@@ -56,3 +56,6 @@ sensor.wil_status:
 
 sensor.sara_status:
   entity_picture: /local/sara.jpg
+
+light.level:
+  friendly_name: Master Bath Lights

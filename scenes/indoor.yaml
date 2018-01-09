@@ -10,7 +10,7 @@
     group.home_lights:
       state: on
       brightness: 254
-      transition: 20
+      transition: 5
 
 - name: Theater On
   entities:
