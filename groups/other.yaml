@@ -143,7 +143,7 @@ Device Sensors:
   - sensor.wils_iphone_battery_level
   - sensor.sara_schraders_iphone_battery_state
   - sensor.sara_schraders_iphone_battery_level
-  - binary_sensor.wilpwr
+  - binary_sensor.wilpwr2
 
 System Sensors:
   - sensor.cpu_use
