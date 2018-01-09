@@ -10,7 +10,7 @@ monthly_color_scene:
           scene.month_
           {%- if now().strftime("%m%d")|int == 101 -%}
           new_years_day
-          {%- if now().strftime("%m%d")|int == 115 -%}
+          {%- elif now().strftime("%m%d")|int == 115 -%}
           mlk_day
           {%- elif now().strftime("%m%d")|int == 212
           or now().strftime("%m%d")|int == 219
@@ -26,9 +26,9 @@ monthly_color_scene:
           or now().strftime("%m%d")|int == 1111
           -%}
           RWB
-          {%- if now().strftime("%m%d")|int == 204 -%}
+          {%- elif now().strftime("%m%d")|int == 204 -%}
           superbowl
-          {%- if now().strftime("%m%d")|int == 214 -%}
+          {%- elif now().strftime("%m%d")|int == 214 -%}
           valentine
           {%- elif now().strftime("%m%d")|int == 213 -%}
           marti_gras
