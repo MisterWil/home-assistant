@@ -381,3 +381,13 @@
 		sudo systemctl status homebridge
 		sudo journalctl -u homebridge
 
+12) Install ZWave USB Stick
+
+	- Install dependency
+		sudo apt-get install libudev-dev
+
+	- Plug usb stick in and find USB stick path
+		ls -ltr /dev/tty*|tail -n 1
+
+	- Give homeassistant user access to the stick
+		sudo usermod -a -G dialout homeassistant
