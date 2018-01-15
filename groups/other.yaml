@@ -14,9 +14,38 @@ Theater:
     - switch.nintendo_switch
 
 House Overview:
+  - sensor.wil_status
+  - sensor.sara_status
+  - alarm_control_panel.abode_alarm
   - binary_sensor.blink_armed_status
+  - lock.front_door_deadbolt
+  - lock.back_door_deadbolt
+  - lock.garage_door_deadbolt
+
+Indoor Overview:
   - climate.downstairs
   - climate.upstairs
+  - light.living_room
+  - light.entertainment_center
+  - light.kitchen_cabinets
+  - light.loft_light
+  - light.guest_room_light
+  - light.master_bedroom
+  - light.nightstand
+  - light.hue_go
+  - light.zooz_unknown_typeb112_id1f1c_level
+  - light.kitchen_lights
+
+Outdoor Overview:
+  - cover.garage_door
+  - switch.skybell_front_door_motion_sensor
+  - light.front_porch
+  - light.garage_left
+  - light.garage_right
+  - sensor.dark_sky_temperature
+  - sensor.dark_sky_humidity
+  - sensor.dark_sky_wind_speed
+  - sensor.dark_sky_precip_probability
   
 Downstairs Climate:
   - climate.downstairs
@@ -47,7 +76,6 @@ Ecobee Sensors:
   - binary_sensor.bedroom_occupancy
 
 Commute:
-  - cover.garage_door
   - sensor.his_morning
   - sensor.his_evening
   - sensor.her_morning

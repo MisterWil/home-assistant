@@ -2,12 +2,9 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
-    - sensor.wil_status
-    - sensor.sara_status
-    - group.commute
-    - group.all_lights
     - group.house_overview
-    - group.abode
+    - group.indoor_overview
+    - group.outdoor_overview
     
 Living Room:
   view: yes
@@ -71,3 +68,5 @@ Sensors:
     - group.history
     - group.packages
     - media_player.spotify
+    - group.commute
+    - group.abode
