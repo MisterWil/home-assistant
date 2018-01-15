@@ -1,6 +1,3 @@
-# Essentially: If either person went from away to just arrived
-# and the other person is not home turn on some lights
-
 - alias: Presence - Turn the lights on if someone gets home
 
   trigger:
@@ -33,3 +30,33 @@
   action:
     - service: scene.turn_on
       entity_id: scene.indoor_lights_home
+
+- alias: Presence - When someone gets home turn off ecobee away mode
+
+  trigger:
+    - platform: state
+      entity_id: input_select.wil_status_dropdown
+      from: 'Away'
+      to: 'Just Arrived'
+
+    - platform: state
+      entity_id: input_select.sara_status_dropdown
+      from: 'Away'
+      to: 'Just Arrived'
+      
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+        
+    - condition: state
+      entity_id: switch.presence
+      state: 'on'
+
+    - condition: template
+      value_template: "{{ not (is_state('sensor.wil_status', 'Home') or is_state('sensor.sara_status', 'Home')) }}"
+      
+  action:
+    - service: climate.set_away_mode
+      data:
+        away_mode: 'off'

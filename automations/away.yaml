@@ -40,3 +40,44 @@
       
     - service: remote.turn_off
       entity_id: remote.living_room
+
+- alias: Presence - When everyone has gone away set ecobees to away mode
+
+  trigger:
+    - platform: state
+      entity_id: input_select.wil_status_dropdown
+      to: 'Away'
+
+    - platform: state
+      entity_id: input_select.sara_status_dropdown
+      to: 'Away'
+      
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.presence
+      state: 'on'
+      
+    - condition: state
+      entity_id: switch.vacation
+      state: 'off'
+      
+    - condition: state
+      entity_id: switch.guests
+      state: 'off'
+
+    - condition: state
+      entity_id: input_select.wil_status_dropdown
+      state: 'Away'
+
+    - condition: state
+      entity_id: input_select.sara_status_dropdown
+      state: 'Away'
+
+  action:
+    - service: climate.set_away_mode
+      data:
+        away_mode: 'on'
