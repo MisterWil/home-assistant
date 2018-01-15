@@ -302,3 +302,8 @@ Locks:
   - lock.front_door_deadbolt
   - lock.back_door_deadbolt
   - lock.garage_door_deadbolt
+
+External Doors:
+  - binary_sensor.front_door
+  - binary_sensor.back_door
+  - binary_sensor.garage_entry_door

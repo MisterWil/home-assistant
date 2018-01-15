@@ -1,0 +1,6 @@
+ecobee_mode:
+  name: Ecobee Mode
+  options:
+    - cool
+    - heat
+    - auto

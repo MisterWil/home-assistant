@@ -9,3 +9,7 @@ get_ready_for_bed:
 internet:
   name: Internet
   initial: on
+
+ecobee_doors:
+  name: Ecobee Door Override
+  initial: off

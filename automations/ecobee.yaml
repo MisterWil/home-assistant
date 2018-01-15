@@ -1,0 +1,57 @@
+- alias: Trigger - Disable ecobee when doors have been open for more than 5 minutes
+
+  trigger:
+    - platform: state
+      entity_id: group.external_doors
+      to: 'on'
+      for:
+        minutes: 5
+      
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+
+  action:
+    # Set the "did we toggle this" input boolean to true
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.ecobee_doors
+
+    # Save the last operation mode of the thermostat
+    - service: input_select.select_option
+      entity_id: input_select.ecobee_mode
+      data_template:
+        options: '{{ states.climate.downstairs.attributes.operation_mode }}'
+
+    # Turn off the thermostats
+    - service: climate.set_operation_mode
+      data:
+        operation_mode: 'off'
+
+- alias: Trigger - Re-enable ecobee if disabled once doors have been closed for 5 minutes
+
+  trigger:
+    - platform: state
+      entity_id: group.external_doors
+      to: 'off'
+      for:
+        minutes: 5
+      
+  condition:
+    - condition: state
+      entity_id: switch.automation
+      state: 'on'
+
+    - condition: state
+      entity_id: input_boolean.ecobee_doors
+      state: 'on'
+
+  action:
+    # Set the "did we toggle this" input boolean to true
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.ecobee_doors
+
+    # Set the thermostats back to their previous mode
+    - service: climate.set_operation_mode
+      data_template:
+        operation_mode: '{{ states.input_select.ecobee_mode.state }}'
