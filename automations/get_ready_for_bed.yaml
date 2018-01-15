@@ -29,3 +29,20 @@
     # Turn on the upstairs bedtime scene
     - service: scene.turn_on
       entity_id: scene.get_ready_for_bed
+
+    # Lock all the doors
+    - service: lock.lock
+      entity_id: group.locks
+
+- alias: Trigger - Reset get ready for bed trigger input boolean
+  trigger:
+    - platform: state
+      entity_id: input_boolean.get_ready_for_bed
+      to: 'on'
+      for:
+        seconds: 30
+
+  action:
+    # Reset the boolean switch
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.get_ready_for_bed

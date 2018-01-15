@@ -46,3 +46,16 @@
         entity_id: media_player.spotify
         media_content_id: 'spotify:user:misterwil:playlist:7Iyu1IVXVINPJciIAU4vkv'
         media_content_type: 'playlist'
+
+- alias: Trigger - Reset good night trigger input boolean
+  trigger:
+    - platform: state
+      entity_id: input_boolean.good_night
+      to: 'on'
+      for:
+        seconds: 30
+
+  action:
+    # Reset the boolean switch
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.good_night

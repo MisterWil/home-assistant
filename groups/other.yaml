@@ -297,3 +297,8 @@ Abode:
   - lock.back_door_deadbolt
   - binary_sensor.garage_entry_door
   - lock.garage_door_deadbolt
+
+Locks:
+  - lock.front_door_deadbolt
+  - lock.back_door_deadbolt
+  - lock.garage_door_deadbolt
