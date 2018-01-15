@@ -2,7 +2,8 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
-    - group.family
+    - sensor.wil_status
+    - sensor.sara_status
     - group.commute
     - group.all_lights
     - group.house_overview
