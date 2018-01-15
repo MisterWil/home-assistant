@@ -100,5 +100,8 @@ zone: !include includes/zones.yaml
 
 ios:
 sun:
+
 frontend:
+  themes: !include themes.yaml
+
 config:
