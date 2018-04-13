@@ -272,10 +272,12 @@ Living Room Plant:
 Wil Home:
   - device_tracker.wils_iphone_icloud
   - device_tracker.wils_iphone_bt
+  - device_tracker.wils_iphone_x
 
 Sara Home:
   - device_tracker.saras_iphone_icloud
   - device_tracker.saras_iphone_bt
+  - device_tracker.saras_iphone_x
 
 All Home:
   - group.wil_home
