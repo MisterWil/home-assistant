@@ -8,7 +8,7 @@
   password: !secret his_icloud_password
   account_name: wils_iphone_icloud
   
-- platform: icloud
-  username: !secret her_icloud_username
-  password: !secret her_icloud_password
-  account_name: saras_iphone_icloud
+#- platform: icloud
+#  username: !secret her_icloud_username
+#  password: !secret her_icloud_password
+#  account_name: saras_iphone_icloud
