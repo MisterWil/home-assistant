@@ -2,6 +2,7 @@ wil_status_dropdown:
   name: Wil
   options:
     - Home
+    - Work
     - Just Arrived
     - Just Left
     - Away
@@ -12,6 +13,7 @@ sara_status_dropdown:
   name: Sara
   options:
     - Home
+    - Work
     - Just Arrived
     - Just Left
     - Away
