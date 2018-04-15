@@ -76,6 +76,24 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 3
 
+# Auto start disabled to let zwave setup finish
+homekit:
+  auto_start: False
+  filter:
+    include_entities:
+      - alarm_control_panel.abode_alarm
+      - climate.downstairs
+      - climate.upstairs
+      - light.kitchen_lights
+      - light.zooz_unknown_typeb112_id1f1c_level
+      - sensor.bedroom_temperature
+      - sensor.downstairs_humidity
+      - sensor.downstairs_temperature
+      - sensor.loft_temperature
+      - sensor.upstairs_humidity
+      - sensor.upstairs_temperature
+      - switch.skybell_front_door_motion_sensor
+
 automation: !include_dir_merge_list automations
 binary_sensor: !include_dir_merge_list binary_sensors
 camera: !include_dir_merge_list cameras

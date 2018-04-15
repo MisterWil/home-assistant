@@ -1,0 +1,6 @@
+- alias: Startup - Start Homekit
+  trigger:
+    - platform: event
+      event_type: zwave.network_ready
+  action:
+    - service: homekit.start
