@@ -1,0 +1,23 @@
+- platform: waze_travel_time
+  name: His Morning
+  origin: !secret home_address
+  destination: !secret his_work_address
+  region: 'US'
+
+- platform: waze_travel_time
+  name: His Evening
+  origin: !secret his_work_address
+  destination: !secret home_address
+  region: 'US'
+
+- platform: waze_travel_time
+  name: Her Morning
+  origin: !secret home_address
+  destination: !secret her_work_address
+  region: 'US'
+
+- platform: waze_travel_time
+  name: Her Evening
+  origin: !secret her_work_address
+  destination: !secret home_address
+  region: 'US'
