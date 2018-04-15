@@ -64,6 +64,9 @@
 	- Allow hass port
 		sudo ufw allow 8123
 		
+	- Allow HASS homebridge port
+	  sudo ufw allow 51827
+		
 	- Enable firewall
 		sudo ufw enable
 	
@@ -289,93 +292,7 @@
 	- Restart hass
 		sudo systemctl start home-assistant@homeassistant
 
-11) Install homebridge with homebridge-homeassistant
-	- Install node
-		sudo apt-get install curl
-		curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-		sudo apt-get install -y nodejs
-
-	- Install homebridge
-		sudo apt-get install libavahi-compat-libdnssd-dev
-		sudo npm install -g --unsafe-perm homebridge
-
-	- Install homebridge-homeassistant
-		sudo npm install -g --unsafe-perm homebridge-homeassistant
-
-	- Create homebridge directories
-		sudo mkdir /var/lib/homebridge
-		sudo chown -hR homeassistant /var/lib/homebridge/
-
-	- Install systemctl service files:
-		Create file /etc/default/homebridge:
-			# Defaults / Configuration options for homebridge
-			# The following settings tells homebridge where to find the config.json file and where to persist the data (i.e. pairing and others)
-			HOMEBRIDGE_OPTS=-U /var/lib/homebridge
-
-			# If you uncomment the following line, homebridge will log more
-			# You can display this via systemd's journalctl: journalctl -f -u homebridge
-			# DEBUG=*
-
-		Create file /etc/systemd/system/homebridge.service:
-			[Unit]
-			Description=Node.js HomeKit Server
-			After=syslog.target network-online.target
-
-			[Service]
-			Type=simple
-			User=homeassistant
-			EnvironmentFile=/etc/default/homebridge
-			# Adapt this to your specific setup (could be /usr/bin/homebridge)
-			# See comments below for more information
-			ExecStart=/usr/bin/homebridge $HOMEBRIDGE_OPTS
-			Restart=on-failure
-			RestartSec=10
-			KillMode=process
-
-			[Install]
-			WantedBy=multi-user.target
-
-	- Create homebridge config.json
-		Create file /var/lib/homebridge/config.json:
-			{
-				"bridge": {
-					"name": "Homebridge",
-					"username": "CC:22:3D:E3:CE:30",
-					"port": 51826,
-					"pin": "031-45-154",
-					"manufacturer": "@nfarina",
-					"model": "Homebridge",
-					"serialNumber": "0.4.20"
-				},
-
-				"platforms": [
-					{
-							"platform": "HomeAssistant",
-							"name": "HomeAssistant",
-							"host": "https://mydomain.com",
-							"password": "ApiPasswordHere",
-							"supported_types": ["alarm_control_panel", "automation", "binary_sensor", "climate", "cover", "device_tracker", "fan", "group", "input_boolean", "light", "lock", "media_player", "remote", "scene"$
-							"default_visibility": "hidden",
-							"logging": false,
-							"verify_ssl": true
-					}
-				]
-			}
-
-	- Open homebridge port
-		sudo ufw allow 51826
-		sudo ufw status
-
-	- Reload systemctl, enable and start homebridge
-		sudo systemctl daemon-reload
-		sudo systemctl enable homebridge
-		sudo systemctl start homebridge
-
-	- Status and logs if required
-		sudo systemctl status homebridge
-		sudo journalctl -u homebridge
-
-12) Install ZWave USB Stick
+11) Install ZWave USB Stick
 
 	- Install dependency
 		sudo apt-get install libudev-dev
@@ -386,7 +303,7 @@
 	- Give homeassistant user access to the stick
 		sudo usermod -a -G dialout homeassistant
 		
-13) Install Chromium for HASS USPS Component
+12) Install Chromium for HASS USPS Component
 
   - sudo apt-get install chromium-browser chromium-chromedriver
   - sudo cp -av /usr/bin/chromium-browser /usr/bin/google-chrome
