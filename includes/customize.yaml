@@ -23,37 +23,6 @@ group.all_automations:
   hidden: false
   friendly_name: 'Automations'
 
-alarm_control_panel.abode_alarm:
-  homebridge_visible: true
-  
-climate.downstairs:
-  homebridge_visible: true
-  
-climate.upstairs:
-  homebridge_visible: true
-  
-cover.garage_door:
-  homebridge_visible: true
-  homebridge_cover_type: garage_door
-  
-lock.back_door_deadbolt:
-  homebridge_visible: true
-  
-lock.front_door_deadbolt:
-  homebridge_visible: true
-  
-lock.garage_door_deadbolt:
-  homebridge_visible: true
-  
-switch.skybell_front_door_motion_sensor:
-  homebridge_visible: true
-
-input_boolean.good_night:
-  emulated_hue_hidden: false
-
-input_boolean.get_ready_for_bed:
-  emulated_hue_hidden: false
-
 sensor.wil_status:
   entity_picture: /local/wil.jpg
 
@@ -62,7 +31,3 @@ sensor.sara_status:
 
 light.zooz_unknown_typeb112_id1f1c_level:
   friendly_name: Master Bath Lights
-  emulated_hue_hidden: false
-
-light.kitchen_lights:
-  emulated_hue_hidden: false

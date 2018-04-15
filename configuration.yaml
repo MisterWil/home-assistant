@@ -66,6 +66,15 @@ panel_custom:
   
 emulated_hue:
   expose_by_default: false
+  entities:
+    input_boolean.good_night:
+      hidden: false
+    input_boolean.get_ready_for_bed:
+      hidden: false
+    light.zooz_unknown_typeb112_id1f1c_level:
+      hidden: false
+    light.kitchen_lights:
+      hidden: false
 
 http:
   base_url: !secret hass_base_url
