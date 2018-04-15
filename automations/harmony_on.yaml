@@ -1,4 +1,4 @@
-- alias: Lights - Turn the TV backlight on when the theater is turned on
+- alias: Lights - Entertainment Center Light On With TV
 
   trigger:
     - platform: state

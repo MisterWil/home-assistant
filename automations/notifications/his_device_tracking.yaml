@@ -1,4 +1,4 @@
-- alias: Notification - Husband arrives home
+- alias: Notification - Husband Arrives Home
   trigger:
     - platform: state
       entity_id: input_select.wil_status_dropdown
@@ -16,11 +16,11 @@
         message: >
           Your husband has arrived home!
 
-- alias: Notification - Husband leaves home
+- alias: Notification - Husband Leaves Home
   trigger:
     - platform: state
       entity_id: input_select.wil_status_dropdown
-      to: 'Away'
+      to: 'Just Left'
       
   condition:
     - condition: state
@@ -33,7 +33,7 @@
         message: >
           Your husband has left home!
         
-- alias: Notification - Husband arrives at work
+- alias: Notification - Husband Arrives At WOrk
   trigger:
     - platform: state
       entity_id: !secret his_device_tracker
@@ -51,7 +51,7 @@
         message: >
           Your husband has arrived at work safe and sound!
           
-- alias: Notification - Husband leaves work to probably go home
+- alias: Notification - Husband Leaves Work For Home
   trigger:
     - platform: state
       entity_id: !secret his_device_tracker

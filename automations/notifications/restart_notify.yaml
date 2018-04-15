@@ -1,4 +1,4 @@
-- alias: Notification - Home assistant start
+- alias: Notification - Home-Assistant Start
   trigger:
     - platform: homeassistant
       event: start
@@ -7,4 +7,4 @@
     - service: notify.him
       data:
         message: >
-          Home Assistant has started!
+          Home-Assistant has started!

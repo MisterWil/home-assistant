@@ -1,4 +1,4 @@
-- alias: Trigger - Turn off all downstairs things and dim the bedroom lights
+- alias: Trigger - Get Ready For Bed
   trigger:
     - platform: state
       entity_id: input_boolean.get_ready_for_bed
@@ -34,13 +34,13 @@
     - service: lock.lock
       entity_id: group.locks
 
-- alias: Trigger - Reset get ready for bed trigger input boolean
+- alias: Trigger - Reset Get Ready For Bed Trigger
   trigger:
     - platform: state
       entity_id: input_boolean.get_ready_for_bed
       to: 'on'
       for:
-        seconds: 30
+        seconds: 5
 
   action:
     # Reset the boolean switch

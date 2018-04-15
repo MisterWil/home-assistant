@@ -1,4 +1,4 @@
-- alias: Trigger - Turn off all the indoor lights and media center and arm alarm to home mode
+- alias: Trigger - Good Night
   trigger:
     - platform: state
       entity_id: input_boolean.good_night
@@ -47,13 +47,13 @@
         media_content_id: 'spotify:user:misterwil:playlist:7Iyu1IVXVINPJciIAU4vkv'
         media_content_type: 'playlist'
 
-- alias: Trigger - Reset good night trigger input boolean
+- alias: Trigger - Reset Good Night Trigger
   trigger:
     - platform: state
       entity_id: input_boolean.good_night
       to: 'on'
       for:
-        seconds: 30
+        seconds: 5
 
   action:
     # Reset the boolean switch

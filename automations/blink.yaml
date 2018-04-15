@@ -1,4 +1,4 @@
-- alias: Blink - When the alarm is set to away arm all Blink cameras
+- alias: Blink - Alarm Away Arm All Cameras
 
   trigger:
     - platform: state
@@ -39,11 +39,15 @@
       data_template:
         friendly_name: "{{ states.camera.downstairs.attributes.friendly_name }}"
         device_armed: 'True'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.molly_cam.attributes.friendly_name }}"
+        device_armed: 'True'
     - service: blink.arm_system
       data:
         device_armed: 'True'
 
-- alias: Blink - When the alarm is set to home arm all outdoor Blink cameras
+- alias: Blink - Alarm Home Arm Outdoor Cameras
 
   trigger:
     - platform: state
@@ -84,11 +88,15 @@
       data_template:
         friendly_name: "{{ states.camera.downstairs.attributes.friendly_name }}"
         device_armed: 'False'
+    - service: blink.arm_camera
+      data_template:
+        friendly_name: "{{ states.camera.molly_cam.attributes.friendly_name }}"
+        device_armed: 'False'
     - service: blink.arm_system
       data:
         device_armed: 'True'
         
-- alias: Blink - When the alarm is set to standby disarm all blink cameras
+- alias: Blink - Alarm Standby Disarm All Cameras
 
   trigger:
     - platform: state
@@ -134,7 +142,7 @@
         friendly_name: "{{ states.camera.downstairs.attributes.friendly_name }}"
         device_armed: 'True'
         
-- alias: Blink - Update Blink pictures every day at noon
+- alias: Blink - Blink Snapshots At Noon
 
   trigger:
     - platform: time

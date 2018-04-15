@@ -1,4 +1,4 @@
-- alias: Lights - Turn some lights on if it gets dark out
+- alias: Lights - Lights On When Dark
   trigger:
     - platform: numeric_state
       entity_id: sun.sun

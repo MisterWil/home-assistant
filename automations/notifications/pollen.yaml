@@ -1,4 +1,4 @@
-- alias: Notification - Damn pollen
+- alias: Notification - Pollen
   trigger:
     - platform: time
       at: '07:00:00'
@@ -25,7 +25,7 @@
           high
           {%- endif %}
            
-- alias: Notification - Damn cold/flu viruses
+- alias: Notification - Cold and Flu
   trigger:
     - platform: time
       at: '07:00:00'

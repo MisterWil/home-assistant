@@ -1,4 +1,4 @@
-- alias: Trigger - Disable ecobee when doors have been open for more than 5 minutes
+- alias: Trigger - Disable Ecobee Doors Open 5 Minutes
 
   trigger:
     - platform: state
@@ -28,7 +28,7 @@
       data:
         operation_mode: 'off'
 
-- alias: Trigger - Re-enable ecobee if disabled once doors have been closed for 5 minutes
+- alias: Trigger - Enable Ecobee After Doors Closed
 
   trigger:
     - platform: state

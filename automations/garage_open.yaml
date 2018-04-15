@@ -1,4 +1,4 @@
-- alias: Presence - Close garage door if everyone gone and it is left open
+- alias: Presence - Close Garage When Open After Away
 
   trigger:
     - platform: state

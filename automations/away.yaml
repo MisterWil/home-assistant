@@ -1,4 +1,4 @@
-- alias: Presence - When everyone has gone away turn everything off
+- alias: Presence - Things Off When Everyone Away
 
   trigger:
     - platform: state
@@ -41,7 +41,7 @@
     - service: remote.turn_off
       entity_id: remote.living_room
 
-- alias: Presence - When everyone has gone away set ecobees to away mode
+- alias: Presence - Ecobee Away On When Everyone Gone
 
   trigger:
     - platform: state

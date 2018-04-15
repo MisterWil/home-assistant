@@ -1,4 +1,4 @@
-- alias: Trigger - Flip input boolean if internet goes down for 5 minutes
+- alias: Trigger - Flip Internet Down Boolean
   trigger:
     - platform: state
       entity_id: sensor.internet
@@ -11,7 +11,7 @@
     - service: input_boolean.turn_off
       entity_id: input_boolean.internet
 
-- alias: Notify & Trigger - Internet has come back online
+- alias: Notify & Trigger - Internet Back Online
   trigger:
     - platform: state
       entity_id: sensor.internet

@@ -1,4 +1,4 @@
-- alias: Notification - Package delivery
+- alias: Notification - Package Delivery
   trigger:
     platform: state
     entity_id: sensor.deliveries_today

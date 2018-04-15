@@ -1,4 +1,4 @@
-- alias: Notification - Wife arrives home
+- alias: Notification - Wife Arrives Home
   trigger:
     - platform: state
       entity_id: input_select.sara_status_dropdown
@@ -16,11 +16,11 @@
         message: >
           Your wife has arrived home!
 
-- alias: Notification - Wife leaves home
+- alias: Notification - Wife Leaves Home
   trigger:
     - platform: state
       entity_id: input_select.sara_status_dropdown
-      to: 'Away'
+      to: 'Just Left'
       
   condition:
     - condition: state
@@ -33,7 +33,7 @@
         message: >
           Your wife has left home!
         
-- alias: Notification - Wife arrives at work
+- alias: Notification - Wife Arrives At Work
   trigger:
     - platform: state
       entity_id: !secret her_device_tracker
@@ -51,7 +51,7 @@
         message: >
           Your wife has arrived at work safe and sound!
           
-- alias: Notification - Wife leaves work to probably go home
+- alias: Notification - Wife Leaves Work For Home
   trigger:
     - platform: state
       entity_id: !secret her_device_tracker

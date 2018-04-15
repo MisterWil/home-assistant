@@ -1,4 +1,4 @@
-- alias: Lights - Turn off any indoor lights if nobody is moving around 2-3 hours before sunrise
+- alias: Lights - No Motion Late Night Lights Off
 
   trigger:
     - platform: sun
@@ -31,12 +31,12 @@
     - service: light.turn_off
       entity_id: group.indoor_lights
 
-- alias: Lights - Turn off outdoor lights half an hour before sunrise
+- alias: Lights - Outdoor Lights Off 15m Before Sunrise
 
   trigger:
     - platform: sun
       event: 'sunrise'
-      offset: '-00:30:00'
+      offset: '-00:15:00'
         
   condition:
     - condition: state

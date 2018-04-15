@@ -1,4 +1,4 @@
-- alias: Mark person as just arrived
+- alias: Trigger - Mark Person Arrived
   trigger:
     - platform: state
       entity_id: group.wil_home
@@ -19,7 +19,7 @@
           {% endif %}
         option: Just Arrived
  
-- alias: Mark person as home
+- alias: Trigger - Mark Person Home
   trigger:
     - platform: state
       entity_id: input_select.wil_status_dropdown
@@ -50,7 +50,7 @@
           {% endif %}
         option: Home
  
-- alias: Mark person as just left
+- alias: Trigger - Mark Person Left
   trigger:
     - platform: state
       entity_id: group.wil_home
@@ -71,7 +71,7 @@
           {% endif %}
         option: Just Left
  
-- alias: Mark person as away
+- alias: Trigger - Mark Person Away
   trigger:
     - platform: state
       entity_id: input_select.wil_status_dropdown
@@ -94,7 +94,7 @@
           {% endif %}
         option: Away
  
-- alias: Mark person as extended away
+- alias: Trigger - Mark Person Extended Away
   trigger:
     - platform: state
       entity_id: input_select.wil_status_dropdown

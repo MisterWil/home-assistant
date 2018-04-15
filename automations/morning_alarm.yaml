@@ -1,4 +1,4 @@
-- alias: Alarm - Set alarm to standby in the morning
+- alias: Alarm - Disarm In Morning
   trigger:
     - platform: state
       entity_id: light.zooz_unknown_typeb112_id1f1c_level

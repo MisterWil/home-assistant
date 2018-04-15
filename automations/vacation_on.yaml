@@ -1,4 +1,4 @@
-- alias: Vacation & Lights - Turn on lights randomly around sunset
+- alias: Vacation & Lights - Lights On Randomly Around Sunset
 
   trigger:
     - platform: sun

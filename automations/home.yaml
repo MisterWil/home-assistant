@@ -1,4 +1,4 @@
-- alias: Presence - Turn the lights on if someone gets home
+- alias: Presence - Lights On When Home
 
   trigger:
     - platform: state
@@ -31,7 +31,7 @@
     - service: scene.turn_on
       entity_id: scene.indoor_lights_home
 
-- alias: Presence - When someone gets home turn off ecobee away mode
+- alias: Presence - Ecobee Away Off When Home
 
   trigger:
     - platform: state
