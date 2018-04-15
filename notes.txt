@@ -391,3 +391,8 @@
 
 	- Give homeassistant user access to the stick
 		sudo usermod -a -G dialout homeassistant
+		
+13) Install Chromium for HASS USPS Component
+
+  - sudo apt-get install chromium-browser chromium-chromedriver
+  - sudo cp -av /usr/bin/chromium-browser /usr/bin/google-chrome
