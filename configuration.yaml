@@ -42,10 +42,10 @@ skybell:
   username: !secret skybell_username
   password: !secret skybell_password
 
-# Non-functional currently
-#usps:
-#  username: !secret usps_username
-#  password: !secret usps_password
+usps:
+  username: !secret usps_username
+  password: !secret usps_password
+  driver: 'chrome'
 
 hue:
   bridges:
