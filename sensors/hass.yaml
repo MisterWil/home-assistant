@@ -1,7 +1,7 @@
 - platform: command_line
   name: New Commits
   scan_interval: 600
-  command: "cd /opt/homeassistant/ && git fetch && git log master..origin/master --pretty=oneline | wc -l"
+  command: "git fetch && git log master..origin/master --pretty=oneline | wc -l"
 
 # Note: This will not work until the given automation also works
 #- platform: template
@@ -12,7 +12,7 @@
 
 - platform: command_line
   name: "HASS Uptime"
-  command: echo "$(($(date +%s) - $(date -d "$(head -n1 /opt/homeassistant/home-assistant.log | cut -d' ' -f-2)" +%s)))"
+  command: echo "$(($(date +%s) - $(date -d "$(head -n1 home-assistant.log | cut -d' ' -f-2)" +%s)))"
   scan_interval: 720
   value_template: >-
     {% set uptime = value | int %}
