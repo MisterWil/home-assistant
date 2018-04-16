@@ -13,7 +13,16 @@ homeassistant:
 #google:
 #  client_id: !secret google_client_id
 #  client_secret: !secret google_client_secret
-  
+
+influxdb:
+  host: 127.0.0.1
+  port: 8086
+  database: homeassistant
+  default_measurement: state
+  exclude: 
+    domains:
+      - group 
+
 ecobee:
   api_key: !secret ecobee_api_key
   
