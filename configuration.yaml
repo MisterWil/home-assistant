@@ -59,20 +59,9 @@ skybell:
 hue:
   bridges:
     - host: !secret hue_host
-      allow_in_emulated_hue: false
       allow_unreachable: true
       allow_hue_groups: false
-
-zwave:
-  usb_path: /dev/ttyACM0
-  
-panel_custom:
-  - name: floorplan
-    sidebar_title: Floorplan
-    sidebar_icon: mdi:home
-    url_path: floorplan
-    config: !include floorplan.yaml
-  
+      
 emulated_hue:
   expose_by_default: false
   entities:
@@ -84,6 +73,16 @@ emulated_hue:
       hidden: false
     light.kitchen_lights:
       hidden: false
+
+zwave:
+  usb_path: /dev/ttyACM0
+
+panel_custom:
+  - name: floorplan
+    sidebar_title: Floorplan
+    sidebar_icon: mdi:home
+    url_path: floorplan
+    config: !include floorplan.yaml
 
 http:
   base_url: !secret hass_base_url
