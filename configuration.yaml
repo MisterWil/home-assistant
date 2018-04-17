@@ -110,6 +110,11 @@ homekit:
       - sensor.upstairs_humidity
       - sensor.upstairs_temperature
       - switch.skybell_front_door_motion_sensor
+      
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+    - key: !secret xiaomi_gateway_key
 
 automation: !include_dir_merge_list automations
 binary_sensor: !include_dir_merge_list binary_sensors
