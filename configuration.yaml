@@ -114,7 +114,8 @@ homekit:
 xiaomi_aqara:
   discovery_retry: 10
   gateways:
-    - host: 192.168.86.113
+    - mac: e4f042ebcbae
+      host: 192.168.86.113
       key: !secret xiaomi_gateway_key
 
 automation: !include_dir_merge_list automations
