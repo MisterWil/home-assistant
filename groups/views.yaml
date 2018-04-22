@@ -70,3 +70,4 @@ Sensors:
     - media_player.spotify
     - group.commute
     - group.abode
+    - group.xiaomi

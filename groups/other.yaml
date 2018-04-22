@@ -307,3 +307,19 @@ External Doors:
   - binary_sensor.front_door
   - binary_sensor.back_door
   - binary_sensor.garage_entry_door
+  
+Xiaomi:
+  - binary_sensor.motion_sensor_158d0001e50f0d
+  - sensor.illumination_158d0001e50f0d
+  - binary_sensor.motion_sensor_158d0001e5484d
+  - sensor.illumination_158d0001e5484d
+  - binary_sensor.switch_158d0001e88611
+  - binary_sensor.switch_158d000213259d
+  - binary_sensor.water_leak_sensor_158d0001bbe989
+  - binary_sensor.water_leak_sensor_158d0001c32b43
+  - sensor.humidity_158d0002270fdd
+  - sensor.pressure_158d0002270fdd
+  - sensor.temperature_158d0002270fdd
+  - sensor.humidity_158d000227314c
+  - sensor.pressure_158d000227314c
+  - sensor.temperature_158d000227314c
