@@ -138,6 +138,7 @@ scene: !include_dir_merge_list scenes
 script: !include_dir_merge_named scripts
 sensor: !include_dir_merge_list sensors
 switch: !include_dir_merge_list switches
+weather: !include includes/weather.yaml
 zone: !include includes/zones.yaml
 
 ios:
