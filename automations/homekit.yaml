@@ -1,6 +1,7 @@
 - alias: Startup - Start Homekit
   trigger:
-    - platform: event
-      event_type: zwave.network_ready
+    - platform: homeassistant
+      event: start
   action:
+    - delay: 00:05  # Waits 5 minutes
     - service: homekit.start
