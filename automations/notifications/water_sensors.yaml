@@ -1,7 +1,7 @@
 - alias: Notification - Water Sensors
   trigger:
     - platform: state
-      entity_id: group.water_sensors
+      entity_id: binary_sensor.water_leak_sensor_158d0001bbe989, binary_sensor.water_leak_sensor_158d0001c32b43
       from: 'off'
       to: 'on'
 
