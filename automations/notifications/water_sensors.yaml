@@ -8,4 +8,4 @@
   action:
     - service: notify.all
       data_template:
-        message: 'The {{ trigger.from_state.attributes.friendly_name }} water sensor has triggered!''
+        message: 'The {{ trigger.from_state.attributes.friendly_name }} water sensor has triggered!'
