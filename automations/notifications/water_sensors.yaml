@@ -1,0 +1,11 @@
+- alias: Notification - Water Sensors
+  trigger:
+    - platform: state
+      entity_id: group.water_sensors
+      to: 'on'
+
+  action:
+    - service: notify.all
+      data:
+        message: >
+          The {{ state.attributes.friendly_name }} water sensor has triggered!

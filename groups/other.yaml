@@ -304,6 +304,10 @@ External Doors:
   - binary_sensor.back_door
   - binary_sensor.garage_entry_door
   
+Water Sensors:
+  - binary_sensor.water_leak_sensor_158d0001bbe989
+  - binary_sensor.water_leak_sensor_158d0001c32b43
+  
 Xiaomi:
   - binary_sensor.motion_sensor_158d0001e50f0d
   - sensor.illumination_158d0001e50f0d
