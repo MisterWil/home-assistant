@@ -5,6 +5,7 @@ default_view:
     - group.house_overview
     - group.indoor_overview
     - group.outdoor_overview
+    - weather.dark_sky
     
 Living Room:
   view: yes

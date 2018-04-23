@@ -31,3 +31,37 @@ sensor.sara_status:
 
 light.zooz_unknown_typeb112_id1f1c_level:
   friendly_name: Master Bath Lights
+  
+binary_sensor.motion_sensor_158d0001e50f0d:
+  friendly_name: Motion Sensor 2
+sensor.illumination_158d0001e50f0d:
+  friendly_name: Motion Sensor Lux 2
+
+binary_sensor.motion_sensor_158d0001e5484d:
+  friendly_name: Kitchen Motion (1)
+sensor.illumination_158d0001e5484d:
+  friendly_name: Kitchen Lux (1)
+
+binary_sensor.switch_158d0001e88611:
+  friendly_name: Button 2
+binary_sensor.switch_158d000213259d:
+  friendly_name: Button 1
+
+binary_sensor.water_leak_sensor_158d0001bbe989:
+  friendly_name: Kitchen Sink (1)
+binary_sensor.water_leak_sensor_158d0001c32b43:
+  friendly_name: Laundry Washer (2)
+
+sensor.humidity_158d0002270fdd:
+  friendly_name: Master Bath Lights
+sensor.pressure_158d0002270fdd:
+  friendly_name: Master Bath Lights
+sensor.temperature_158d0002270fdd:
+  friendly_name: Master Bath Lights
+
+sensor.humidity_158d000227314c:
+  friendly_name: Garage Humidity (1)
+sensor.pressure_158d000227314c:
+  friendly_name: Garage Pressure (1)
+sensor.temperature_158d000227314c:
+  friendly_name: Garage Temperature (1)

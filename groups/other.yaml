@@ -42,10 +42,6 @@ Outdoor Overview:
   - light.front_porch
   - light.garage_left
   - light.garage_right
-  - sensor.dark_sky_temperature
-  - sensor.dark_sky_humidity
-  - sensor.dark_sky_wind_speed
-  - sensor.dark_sky_precip_probability
   
 Downstairs Climate:
   - climate.downstairs
