@@ -110,6 +110,15 @@ homekit:
       - sensor.upstairs_humidity
       - sensor.upstairs_temperature
       - switch.skybell_front_door_motion_sensor
+      - binary_sensor.front_door
+      - binary_sensor.back_door
+      - binary_sensor.garage_entry_door
+      - cover.garage_door
+      - lock.front_door_deadbolt
+      - lock.back_door_deadbolt
+      - lock.garage_door_deadbolt
+      - sensor.humidity_158d000227314c
+      - sensor.temperature_158d000227314c
       
 xiaomi_aqara:
   discovery_retry: 10
